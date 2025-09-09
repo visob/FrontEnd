@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipo Innovador - Portada</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/logo.svg" alt="Logo" width="40" height="40" class="me-2">
+                Equipo Innovador
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <i class="bi bi-house-fill me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-people-fill me-1"></i>Integrantes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="lucas.html">Lucas</a></li>
+                            <li><a class="dropdown-item" href="victoria.html">Victoria</a></li>
+                            <li><a class="dropdown-item" href="sebastian.html">Sebastián</a></li>
+                            <li><a class="dropdown-item" href="luis.html">Luis</a></li>
+                            <li><a class="dropdown-item" href="estiven.html">Estiven</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bitacora.html">
+                            <i class="bi bi-journal-text me-1"></i>Bitácora
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light btn-sm ms-2" id="btn-tema" title="Cambiar tema">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center min-vh-100 pt-5">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Equipo Innovador</h1>
+                    <p class="lead mb-4">
+                        Somos un grupo de estudiantes apasionados por la tecnología y el desarrollo web. 
+                        Nuestro objetivo es crear soluciones innovadoras y aprender juntos en este emocionante viaje.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <button class="btn btn-primary btn-lg" id="btn-bienvenida">
+                            <i class="bi bi-hand-thumbs-up me-2"></i>¡Bienvenido!
+                        </button>
+                        <a href="#equipo" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-arrow-down me-2"></i>Conocer al equipo
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="img/logo.svg" alt="Logo del equipo" class="img-fluid" style="max-width: 300px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección del Equipo -->
+    <section id="equipo" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold text-primary mb-3">Nuestro Equipo</h2>
+                    <p class="lead text-muted">
+                        Conoce a los integrantes de nuestro equipo y descubre sus habilidades, 
+                        intereses y lo que los motiva en el mundo del desarrollo web.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Integrante 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 observe">
+                        <img src="img/avatar1.svg" class="card-img-top" alt="Lucas">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Lucas</h5>
+                            <p class="text-muted mb-3">
+                                <i class="bi bi-geo-alt-fill me-1"></i>Madrid, España
+                            </p>
+                            <p class="card-text">
+                                Desarrollador Frontend especializado en React y diseño UX/UI. 
+                                Le apasiona crear interfaces intuitivas y accesibles.
+                            </p>
+                            <div class="skills-list mb-3">
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">CSS</span>
+                                <span class="skill-tag">Figma</span>
+                            </div>
+                            <a href="lucas.html" class="btn btn-primary">
+                                <i class="bi bi-person-circle me-1"></i>Ver perfil
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Integrante 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 observe">
+                        <img src="img/avatar2.svg" class="card-img-top" alt="Victoria">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Victoria</h5>
+                            <p class="text-muted mb-3">
+                                <i class="bi bi-geo-alt-fill me-1"></i>Barcelona, España
+                            </p>
+                            <p class="card-text">
+                                Desarrolladora Backend con experiencia en Node.js y bases de datos. 
+                                Enfocada en crear APIs robustas y escalables.
+                            </p>
+                            <div class="skills-list mb-3">
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">MongoDB</span>
+                                <span class="skill-tag">Express</span>
+                                <span class="skill-tag">Python</span>
+                            </div>
+                            <a href="victoria.html" class="btn btn-primary">
+                                <i class="bi bi-person-circle me-1"></i>Ver perfil
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Integrante 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 observe">
+                        <img src="img/avatar3.svg" class="card-img-top" alt="Sebastián">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Sebastián</h5>
+                            <p class="text-muted mb-3">
+                                <i class="bi bi-geo-alt-fill me-1"></i>Valencia, España
+                            </p>
+                            <p class="card-text">
+                                Desarrollador Full Stack con pasión por la innovación y las nuevas tecnologías. 
+                                Especialista en integración de sistemas.
+                            </p>
+                            <div class="skills-list mb-3">
+                                <span class="skill-tag">Vue.js</span>
+                                <span class="skill-tag">PHP</span>
+                                <span class="skill-tag">MySQL</span>
+                                <span class="skill-tag">Docker</span>
+                            </div>
+                            <a href="sebastian.html" class="btn btn-primary">
+                                <i class="bi bi-person-circle me-1"></i>Ver perfil
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Integrante 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 observe">
+                        <img src="img/avatar4.svg" class="card-img-top" alt="Luis">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Luis</h5>
+                            <p class="text-muted mb-3">
+                                <i class="bi bi-geo-alt-fill me-1"></i>Sevilla, España
+                            </p>
+                            <p class="card-text">
+                                Desarrollador Mobile especializado en React Native y Flutter. 
+                                Experto en crear aplicaciones móviles multiplataforma.
+                            </p>
+                            <div class="skills-list mb-3">
+                                <span class="skill-tag">React Native</span>
+                                <span class="skill-tag">Flutter</span>
+                                <span class="skill-tag">Dart</span>
+                                <span class="skill-tag">Firebase</span>
+                            </div>
+                            <a href="luis.html" class="btn btn-primary">
+                                <i class="bi bi-person-circle me-1"></i>Ver perfil
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Integrante 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 observe">
+                        <img src="img/avatar5.svg" class="card-img-top" alt="Estiven">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Estiven</h5>
+                            <p class="text-muted mb-3">
+                                <i class="bi bi-geo-alt-fill me-1"></i>Bilbao, España
+                            </p>
+                            <p class="card-text">
+                                DevOps Engineer especializado en automatización y despliegue continuo. 
+                                Experto en infraestructura cloud y contenedores.
+                            </p>
+                            <div class="skills-list mb-3">
+                                <span class="skill-tag">AWS</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">Kubernetes</span>
+                                <span class="skill-tag">Jenkins</span>
+                            </div>
+                            <a href="estiven.html" class="btn btn-primary">
+                                <i class="bi bi-person-circle me-1"></i>Ver perfil
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Estadísticas -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="observe">
+                        <h3 class="display-4 fw-bold" id="contador-proyectos">0</h3>
+                        <p class="lead">Proyectos Completados</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="observe">
+                        <h3 class="display-4 fw-bold" id="contador-tecnologias">0</h3>
+                        <p class="lead">Tecnologías Dominadas</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="observe">
+                        <h3 class="display-4 fw-bold" id="contador-experiencia">0</h3>
+                        <p class="lead">Años de Experiencia</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="observe">
+                        <h3 class="display-4 fw-bold" id="contador-cafes">0</h3>
+                        <p class="lead">Tazas de Café</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Equipo Innovador</h5>
+                    <p class="mb-0">Desarrollando el futuro, una línea de código a la vez.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <i class="bi bi-calendar-event me-1"></i>
+                        © 2024 - Proyecto de Desarrollo Web
+                    </p>
+                    <div class="mt-2">
+                        <button class="btn btn-outline-light btn-sm me-2" onclick="scrollSuave('equipo')">
+                            <i class="bi bi-arrow-up"></i> Volver arriba
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript personalizado -->
+    <script src="js/main.js"></script>
+    
+    <!-- Script específico para la página principal -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Contadores animados
+            setTimeout(() => {
+                contadorAnimado('contador-proyectos', 15, 2000);
+                contadorAnimado('contador-tecnologias', 12, 2500);
+                contadorAnimado('contador-experiencia', 3, 1800);
+                contadorAnimado('contador-cafes', 847, 3000);
+            }, 1000);
+            
+            // Efecto de escritura en el título
+            const titulo = document.querySelector('.hero h1');
+            if (titulo) {
+                const textoOriginal = titulo.textContent;
+                titulo.textContent = '';
+                efectoEscritura('', textoOriginal, 100);
+                titulo.textContent = textoOriginal; // Fallback
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2c3e50;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo circular -->
+  <circle cx="100" cy="100" r="100" fill="url(#grad1)"/>
+  
+  <!-- Cara -->
+  <circle cx="100" cy="85" r="45" fill="#fdbcb4"/>
+  
+  <!-- Cabello -->
+  <path d="M55 70 Q100 40 145 70 Q140 50 100 45 Q60 50 55 70" fill="#8b4513"/>
+  
+  <!-- Ojos -->
+  <circle cx="85" cy="80" r="3" fill="#2c3e50"/>
+  <circle cx="115" cy="80" r="3" fill="#2c3e50"/>
+  
+  <!-- Nariz -->
+  <ellipse cx="100" cy="90" rx="2" ry="3" fill="#f4a688"/>
+  
+  <!-- Boca -->
+  <path d="M90 100 Q100 110 110 100" stroke="#2c3e50" stroke-width="2" fill="none"/>
+  
+  <!-- Cuerpo -->
+  <rect x="75" y="130" width="50" height="70" rx="25" fill="#e74c3c"/>
+  
+  <!-- Brazos -->
+  <circle cx="60" cy="150" r="15" fill="#fdbcb4"/>
+  <circle cx="140" cy="150" r="15" fill="#fdbcb4"/>
+  
+  <!-- Detalles de la ropa -->
+  <circle cx="100" cy="145" r="3" fill="#c0392b"/>
+  <circle cx="100" cy="160" r="3" fill="#c0392b"/>
+</svg>

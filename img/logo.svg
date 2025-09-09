@@ -1,0 +1,25 @@
+<svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e74c3c;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+  
+  <!-- Círculo principal -->
+  <circle cx="75" cy="75" r="70" fill="url(#logoGrad)" filter="url(#shadow)"/>
+  
+  <!-- Formas geométricas representando trabajo en equipo -->
+  <polygon points="75,25 95,55 55,55" fill="#ffffff" opacity="0.9"/>
+  <circle cx="45" cy="85" r="15" fill="#ffffff" opacity="0.8"/>
+  <circle cx="105" cy="85" r="15" fill="#ffffff" opacity="0.8"/>
+  <rect x="60" y="100" width="30" height="30" rx="5" fill="#ffffff" opacity="0.9"/>
+  
+  <!-- Texto del equipo -->
+  <text x="75" y="140" text-anchor="middle" font-family="Poppins, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">EQUIPO</text>
+  <text x="75" y="155" text-anchor="middle" font-family="Poppins, sans-serif" font-size="10" fill="#7f8c8d">INNOVADOR</text>
+</svg>

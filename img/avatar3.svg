@@ -1,0 +1,49 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2ecc71;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#27ae60;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo circular -->
+  <circle cx="100" cy="100" r="100" fill="url(#grad3)"/>
+  
+  <!-- Cara -->
+  <circle cx="100" cy="85" r="45" fill="#deb887"/>
+  
+  <!-- Cabello rizado -->
+  <circle cx="80" cy="60" r="12" fill="#2c1810"/>
+  <circle cx="100" cy="55" r="15" fill="#2c1810"/>
+  <circle cx="120" cy="60" r="12" fill="#2c1810"/>
+  <circle cx="70" cy="75" r="10" fill="#2c1810"/>
+  <circle cx="130" cy="75" r="10" fill="#2c1810"/>
+  
+  <!-- Ojos -->
+  <circle cx="85" cy="80" r="3" fill="#2c3e50"/>
+  <circle cx="115" cy="80" r="3" fill="#2c3e50"/>
+  
+  <!-- Gafas -->
+  <circle cx="85" cy="80" r="12" fill="none" stroke="#2c3e50" stroke-width="2"/>
+  <circle cx="115" cy="80" r="12" fill="none" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="97" y1="80" x2="103" y2="80" stroke="#2c3e50" stroke-width="2"/>
+  
+  <!-- Nariz -->
+  <ellipse cx="100" cy="90" rx="2" ry="3" fill="#cd853f"/>
+  
+  <!-- Boca -->
+  <path d="M92 100 Q100 105 108 100" stroke="#2c3e50" stroke-width="2" fill="none"/>
+  
+  <!-- Cuerpo -->
+  <rect x="75" y="130" width="50" height="70" rx="25" fill="#f39c12"/>
+  
+  <!-- Brazos -->
+  <circle cx="60" cy="150" r="15" fill="#deb887"/>
+  <circle cx="140" cy="150" r="15" fill="#deb887"/>
+  
+  <!-- Corbata -->
+  <polygon points="100,130 95,140 105,140 100,165 90,155 110,155" fill="#e67e22"/>
+  
+  <!-- Bolsillo -->
+  <rect x="85" y="150" width="15" height="10" fill="#d68910"/>
+</svg>

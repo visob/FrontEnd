@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis - Perfil</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/logo.svg" alt="Logo" width="40" height="40" class="me-2">
+                Equipo Innovador
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house-fill me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-people-fill me-1"></i>Integrantes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="lucas.html">Lucas</a></li>
+                            <li><a class="dropdown-item" href="victoria.html">Victoria</a></li>
+                            <li><a class="dropdown-item" href="sebastian.html">Sebastián</a></li>
+                            <li><a class="dropdown-item active" href="luis.html">Luis</a></li>
+                            <li><a class="dropdown-item" href="estiven.html">Estiven</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bitacora.html">
+                            <i class="bi bi-journal-text me-1"></i>Bitácora
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light btn-sm ms-2" id="btn-tema" title="Cambiar tema">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Perfil Principal -->
+    <section class="py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card profile-card shadow-lg">
+                        <div class="card-body p-5">
+                            <div class="row align-items-center">
+                                <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                                    <img src="img/avatar4.svg" alt="Luis" class="profile-img mb-3" id="profile-image">
+                                    <h2 class="fw-bold text-primary">Luis</h2>
+                                    <p class="text-muted mb-3">
+                                        <i class="bi bi-geo-alt-fill me-1"></i>Sevilla, España
+                                    </p>
+                                    <p class="text-muted mb-3">
+                                        <i class="bi bi-calendar-event me-1"></i>28 años
+                                    </p>
+                                    <button class="btn btn-info" id="btn-rotar" onclick="rotarImagen()">
+                                        <i class="bi bi-arrow-clockwise me-1"></i>Rotar imagen
+                                    </button>
+                                </div>
+                                
+                                <div class="col-lg-8">
+                                    <h3 class="text-primary mb-3">Sobre mí</h3>
+                                    <p class="lead mb-4">
+                                        Soy un desarrollador de software especializado en aplicaciones móviles y web. 
+                                        Me apasiona crear soluciones innovadoras que mejoren la experiencia del usuario. 
+                                        Tengo experiencia en desarrollo multiplataforma y arquitecturas modernas.
+                                    </p>
+                                    
+                                    <h4 class="text-primary mb-3">Habilidades</h4>
+                                    <div class="skills-list mb-4" id="skills-container">
+                                        <span class="skill-tag">React Native</span>
+                                        <span class="skill-tag">Flutter</span>
+                                        <span class="skill-tag">JavaScript</span>
+                                        <span class="skill-tag">TypeScript</span>
+                                        <span class="skill-tag">Firebase</span>
+                                        <span class="skill-tag">MongoDB</span>
+                                        <span class="skill-tag">AWS</span>
+                                    </div>
+                                    
+                                    <h4 class="text-primary mb-3">Experiencia</h4>
+                                    <div class="mb-4">
+                                        <h5 class="fw-bold">Desarrollador Mobile Senior</h5>
+                                        <p class="text-muted mb-2">TechMobile Solutions • 2021 - Presente</p>
+                                        <p>Desarrollo de aplicaciones móviles nativas y multiplataforma para clientes corporativos.</p>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <h5 class="fw-bold">Desarrollador Full Stack</h5>
+                                        <p class="text-muted mb-2">StartupTech • 2019 - 2021</p>
+                                        <p>Desarrollo de aplicaciones web y móviles desde la conceptualización hasta el despliegue.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Favoritos -->
+    <section class="py-5 bg-light favorites-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-center mb-5 text-primary">Mis Favoritos</h3>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-phone display-4 text-primary mb-3"></i>
+                                    <h5 class="card-title">Desarrollo Móvil</h5>
+                                    <p class="card-text">Crear aplicaciones móviles que conecten con los usuarios.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-lightbulb display-4 text-warning mb-3"></i>
+                                    <h5 class="card-title">Innovación</h5>
+                                    <p class="card-text">Explorar nuevas tecnologías y metodologías de desarrollo.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-people display-4 text-success mb-3"></i>
+                                    <h5 class="card-title">Trabajo en Equipo</h5>
+                                    <p class="card-text">Colaborar con equipos multidisciplinarios para lograr objetivos comunes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Favoritos Adicionales -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary mb-4">
+                                <i class="bi bi-film me-2"></i>Películas Favoritas
+                            </h4>
+                            <ul class="favorites-list">
+                                <li>
+                                    <strong>Blade Runner 2049</strong>
+                                    <p class="mb-0 text-muted">Una obra maestra visual que explora la relación entre humanos y tecnología.</p>
+                                </li>
+                                <li>
+                                    <strong>Ex Machina</strong>
+                                    <p class="mb-0 text-muted">Fascinante exploración de la inteligencia artificial y la conciencia.</p>
+                                </li>
+                                <li>
+                                    <strong>Her</strong>
+                                    <p class="mb-0 text-muted">Una reflexión profunda sobre las relaciones en la era digital.</p>
+                                </li>
+                                <li>
+                                    <strong>The Social Network</strong>
+                                    <p class="mb-0 text-muted">La historia detrás de una de las plataformas más influyentes del mundo.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary mb-4">
+                                <i class="bi bi-music-note-beamed me-2"></i>Música Favorita
+                            </h4>
+                            <ul class="favorites-list">
+                                <li>
+                                    <strong>Tame Impala - Currents</strong>
+                                    <p class="mb-0 text-muted">Perfecto para sesiones creativas de desarrollo móvil.</p>
+                                </li>
+                                <li>
+                                    <strong>Radiohead - OK Computer</strong>
+                                    <p class="mb-0 text-muted">Música que inspira innovación y pensamiento fuera de lo convencional.</p>
+                                </li>
+                                <li>
+                                    <strong>Boards of Canada - Music Has the Right to Children</strong>
+                                    <p class="mb-0 text-muted">Ambient electrónico ideal para concentración profunda.</p>
+                                </li>
+                                <li>
+                                    <strong>Tycho - Dive</strong>
+                                    <p class="mb-0 text-muted">Música instrumental perfecta para el flujo de trabajo.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botón Volver Arriba -->
+    <button class="btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle" 
+            style="width: 50px; height: 50px; z-index: 1000;" 
+            onclick="scrollSuave('top')" 
+            title="Volver arriba">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Equipo Innovador</h5>
+                    <p class="mb-0">Desarrollando el futuro, un proyecto a la vez.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">&copy; 2024 Equipo Innovador. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript personalizado -->
+    <script src="js/main.js"></script>
+</body>
+</html>

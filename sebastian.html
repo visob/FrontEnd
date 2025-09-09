@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebastián - Perfil</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/logo.svg" alt="Logo" width="40" height="40" class="me-2">
+                Equipo Innovador
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house-fill me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-people-fill me-1"></i>Integrantes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="lucas.html">Lucas</a></li>
+                            <li><a class="dropdown-item" href="victoria.html">Victoria</a></li>
+                            <li><a class="dropdown-item active" href="sebastian.html">Sebastián</a></li>
+                            <li><a class="dropdown-item" href="luis.html">Luis</a></li>
+                            <li><a class="dropdown-item" href="estiven.html">Estiven</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bitacora.html">
+                            <i class="bi bi-journal-text me-1"></i>Bitácora
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light btn-sm ms-2" id="btn-tema" title="Cambiar tema">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Perfil Principal -->
+    <section class="py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card profile-card shadow-lg">
+                        <div class="card-body p-5">
+                            <div class="row align-items-center">
+                                <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                                    <img src="img/avatar3.svg" alt="Sebastián" class="profile-img mb-3" id="profile-image">
+                                    <h2 class="fw-bold text-primary">Sebastián</h2>
+                                    <p class="text-muted mb-3">
+                                        <i class="bi bi-geo-alt-fill me-1"></i>Valencia, España
+                                    </p>
+                                    <p class="text-muted mb-3">
+                                        <i class="bi bi-calendar-event me-1"></i>26 años
+                                    </p>
+                                    <button class="btn btn-info" id="btn-rotar" onclick="rotarImagen()">
+                                        <i class="bi bi-arrow-clockwise me-1"></i>Rotar imagen
+                                    </button>
+                                </div>
+                                
+                                <div class="col-lg-8">
+                                    <h3 class="text-primary mb-3">Sobre mí</h3>
+                                    <p class="lead mb-4">
+                                        Soy un desarrollador Full Stack con una gran pasión por la innovación y las nuevas tecnologías. 
+                                        Me especializo en la integración de sistemas y disfruto trabajando tanto en el frontend como en el backend. 
+                                        Siempre estoy buscando maneras de optimizar procesos y crear soluciones eficientes.
+                                    </p>
+                                    
+                                    <h4 class="text-primary mb-3">Habilidades</h4>
+                                    <div class="skills-list mb-4" id="skills-container">
+                                        <span class="skill-tag">Vue.js</span>
+                                        <span class="skill-tag">React</span>
+                                        <span class="skill-tag">PHP</span>
+                                        <span class="skill-tag">Laravel</span>
+                                        <span class="skill-tag">MySQL</span>
+                                        <span class="skill-tag">Docker</span>
+                                        <span class="skill-tag">Git</span>
+                                        <span class="skill-tag">AWS</span>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-primary mb-3" onclick="toggleInfo('certificaciones')">
+                                                <i class="bi bi-award me-1"></i>Certificaciones
+                                            </button>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button class="btn btn-outline-danger" onclick="animarHabilidades()">
+                                                <i class="bi bi-stars me-1"></i>Animar todo
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div id="certificaciones" style="display: none;" class="mt-3 p-3 bg-light rounded">
+                                        <h5>Certificaciones y Logros</h5>
+                                        <ul>
+                                            <li><strong>AWS Certified Developer:</strong> Certificación en servicios de Amazon Web Services</li>
+                                            <li><strong>Vue.js Expert:</strong> Certificación avanzada en Vue.js y Nuxt.js</li>
+                                            <li><strong>Scrum Master:</strong> Metodologías ágiles y gestión de proyectos</li>
+                                            <li><strong>Google Analytics:</strong> Análisis web y métricas digitales</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Favoritos -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary mb-4">
+                                <i class="bi bi-film me-2"></i>Películas Favoritas
+                            </h4>
+                            <ul class="favorites-list" id="movies-list">
+                                <li>
+                                    <strong>The Pursuit of Happyness</strong>
+                                    <p class="mb-0 text-muted">Una historia inspiradora sobre perseverancia y determinación.</p>
+                                </li>
+                                <li>
+                                    <strong>Hidden Figures</strong>
+                                    <p class="mb-0 text-muted">Mujeres pioneras en la tecnología y las matemáticas.</p>
+                                </li>
+                                <li>
+                                    <strong>The Imitation Game</strong>
+                                    <p class="mb-0 text-muted">La fascinante historia de Alan Turing y la computación.</p>
+                                </li>
+                                <li>
+                                    <strong>Steve Jobs</strong>
+                                    <p class="mb-0 text-muted">La biografía del visionario de Apple y la innovación tecnológica.</p>
+                                </li>
+                            </ul>
+                            <button class="btn btn-sm btn-outline-primary mt-3" onclick="mezclarLista('movies-list')">
+                                <i class="bi bi-shuffle me-1"></i>Mezclar lista
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary mb-4">
+                                <i class="bi bi-music-note-beamed me-2"></i>Música Favorita
+                            </h4>
+                            <ul class="favorites-list" id="music-list">
+                                <li>
+                                    <strong>Billie Eilish - When We All Fall Asleep</strong>
+                                    <p class="mb-0 text-muted">Música moderna que me inspira creatividad.</p>
+                                </li>
+                                <li>
+                                    <strong>Coldplay - A Head Full of Dreams</strong>
+                                    <p class="mb-0 text-muted">Melodías que me motivan durante el trabajo.</p>
+                                </li>
+                                <li>
+                                    <strong>Imagine Dragons - Evolve</strong>
+                                    <p class="mb-0 text-muted">Energía perfecta para sesiones de coding intensas.</p>
+                                </li>
+                                <li>
+                                    <strong>Lana Del Rey - Born to Die</strong>
+                                    <p class="mb-0 text-muted">Música atmosférica ideal para concentrarse.</p>
+                                </li>
+                            </ul>
+                            <button class="btn btn-sm btn-outline-primary mt-3" onclick="mezclarLista('music-list')">
+                                <i class="bi bi-shuffle me-1"></i>Mezclar lista
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Progreso de Habilidades -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h3 class="text-primary">Nivel de Habilidades</h3>
+                    <p class="text-muted">Haz clic en "Mostrar progreso" para ver las barras animadas</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-body">
+                            <h5>Frontend</h5>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between">
+                                    <span>Vue.js</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 0%" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between">
+                                    <span>React</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 0%" data-width="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 bg-transparent">
+                        <div class="card-body">
+                            <h5>Backend</h5>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between">
+                                    <span>PHP/Laravel</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 0%" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between">
+                                    <span>MySQL</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 0%" data-width="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary" onclick="mostrarProgreso()">
+                    <i class="bi bi-bar-chart me-1"></i>Mostrar progreso
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Navegación entre perfiles -->
+    <section class="py-4 bg-success text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="carlos-rodriguez.html" class="btn btn-outline-light">
+                            <i class="bi bi-arrow-left me-1"></i>Perfil anterior
+                        </a>
+                        
+                        <div class="text-center">
+                            <small>Otros integrantes:</small>
+                            <div class="mt-2">
+                                <a href="ana-garcia.html" class="btn btn-sm btn-outline-light me-2">Ana</a>
+                                <a href="carlos-rodriguez.html" class="btn btn-sm btn-outline-light">Carlos</a>
+                            </div>
+                        </div>
+                        
+                        <a href="index.html" class="btn btn-outline-light">
+                            Volver al inicio<i class="bi bi-house ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>María López</h5>
+                    <p class="mb-0">Desarrolladora Full Stack | Especialista en Integración</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">
+                        <i class="bi bi-envelope me-1"></i>
+                        maria.lopez@equipoinnovador.com
+                    </p>
+                    <div class="mt-2">
+                        <button class="btn btn-outline-light btn-sm" onclick="scrollSuave('top')">
+                            <i class="bi bi-arrow-up"></i> Volver arriba
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript personalizado -->
+    <script src="js/main.js"></script>
+    
+    <!-- Script específico para el perfil de María -->
+    <script>
+        let rotacion = 0;
+        
+        function rotarImagen() {
+            const img = document.getElementById('profile-image');
+            rotacion += 90;
+            img.style.transform = `rotate(${rotacion}deg)`;
+            img.style.transition = 'transform 0.5s ease';
+            
+            if (rotacion >= 360) {
+                setTimeout(() => {
+                    rotacion = 0;
+                    img.style.transition = 'none';
+                    img.style.transform = 'rotate(0deg)';
+                }, 500);
+            }
+        }
+        
+        function animarHabilidades() {
+            const skills = document.querySelectorAll('.skill-tag');
+            const colores = ['#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6', '#1abc9c'];
+            
+            skills.forEach((skill, index) => {
+                setTimeout(() => {
+                    const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+                    skill.style.backgroundColor = colorAleatorio;
+                    skill.style.transform = 'scale(1.2) rotate(5deg)';
+                    skill.style.transition = 'all 0.3s ease';
+                    
+                    setTimeout(() => {
+                        skill.style.transform = 'scale(1) rotate(0deg)';
+                    }, 300);
+                }, index * 100);
+            });
+            
+            mostrarAlerta('¡Habilidades animadas! 🎨', 'success');
+        }
+        
+        function mezclarLista(listId) {
+            const lista = document.getElementById(listId);
+            const items = Array.from(lista.children);
+            
+            // Mezclar array
+            for (let i = items.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [items[i], items[j]] = [items[j], items[i]];
+            }
+            
+            // Limpiar lista y agregar items mezclados
+            lista.innerHTML = '';
+            items.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateX(-20px)';
+                    lista.appendChild(item);
+                    
+                    setTimeout(() => {
+                        item.style.transition = 'all 0.3s ease';
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateX(0)';
+                    }, 50);
+                }, index * 100);
+            });
+        }
+        
+        function mostrarProgreso() {
+            const barras = document.querySelectorAll('.progress-bar');
+            
+            barras.forEach((barra, index) => {
+                setTimeout(() => {
+                    const ancho = barra.getAttribute('data-width');
+                    barra.style.transition = 'width 1s ease';
+                    barra.style.width = ancho + '%';
+                }, index * 200);
+            });
+            
+            mostrarAlerta('Progreso de habilidades mostrado! 📊', 'info');
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Efecto de pulso en la imagen de perfil
+            const profileImg = document.getElementById('profile-image');
+            setInterval(() => {
+                profileImg.style.transform = 'scale(1.05)';
+                setTimeout(() => {
+                    profileImg.style.transform = 'scale(1)';
+                }, 200);
+            }, 3000);
+            
+            // Animación inicial de las habilidades
+            const skills = document.querySelectorAll('.skill-tag');
+            skills.forEach((skill, index) => {
+                skill.style.opacity = '0';
+                skill.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    skill.style.transition = 'all 0.5s ease';
+                    skill.style.opacity = '1';
+                    skill.style.transform = 'translateY(0)';
+                }, index * 150);
+            });
+        });
+    </script>
+</body>
+</html>

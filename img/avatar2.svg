@@ -1,0 +1,45 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo circular -->
+  <circle cx="100" cy="100" r="100" fill="url(#grad2)"/>
+  
+  <!-- Cara -->
+  <circle cx="100" cy="85" r="45" fill="#f4c2a1"/>
+  
+  <!-- Cabello largo -->
+  <path d="M55 65 Q100 35 145 65 L145 95 Q100 85 55 95 Z" fill="#654321"/>
+  
+  <!-- Ojos -->
+  <circle cx="85" cy="78" r="3" fill="#2c3e50"/>
+  <circle cx="115" cy="78" r="3" fill="#2c3e50"/>
+  
+  <!-- Pestañas -->
+  <path d="M82 75 L88 73" stroke="#2c3e50" stroke-width="1"/>
+  <path d="M112 73 L118 75" stroke="#2c3e50" stroke-width="1"/>
+  
+  <!-- Nariz -->
+  <ellipse cx="100" cy="88" rx="2" ry="3" fill="#e8a688"/>
+  
+  <!-- Boca con sonrisa -->
+  <path d="M88 98 Q100 108 112 98" stroke="#2c3e50" stroke-width="2" fill="none"/>
+  
+  <!-- Cuerpo -->
+  <rect x="75" y="130" width="50" height="70" rx="25" fill="#9b59b6"/>
+  
+  <!-- Brazos -->
+  <circle cx="60" cy="150" r="15" fill="#f4c2a1"/>
+  <circle cx="140" cy="150" r="15" fill="#f4c2a1"/>
+  
+  <!-- Collar -->
+  <circle cx="100" cy="135" r="4" fill="#f1c40f"/>
+  
+  <!-- Detalles de la ropa -->
+  <rect x="85" y="145" width="30" height="3" fill="#8e44ad"/>
+  <rect x="85" y="160" width="30" height="3" fill="#8e44ad"/>
+</svg>

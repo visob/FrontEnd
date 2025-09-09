@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estiven - Perfil</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/logo.svg" alt="Logo" width="40" height="40" class="me-2">
+                Equipo Innovador
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house-fill me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-people-fill me-1"></i>Integrantes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="lucas.html">Lucas</a></li>
+                            <li><a class="dropdown-item" href="victoria.html">Victoria</a></li>
+                            <li><a class="dropdown-item" href="sebastian.html">Sebastián</a></li>
+                            <li><a class="dropdown-item" href="luis.html">Luis</a></li>
+                            <li><a class="dropdown-item active" href="estiven.html">Estiven</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bitacora.html">
+                            <i class="bi bi-journal-text me-1"></i>Bitácora
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light btn-sm ms-2" id="btn-tema" title="Cambiar tema">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Perfil Principal -->
+    <section class="py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card profile-card shadow-lg">
+                        <div class="card-body p-5">
+                            <div class="row align-items-center">
+                                <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                                    <img src="img/avatar5.svg" alt="Estiven" class="profile-img mb-3" id="profile-image">
+                                    <h2 class="fw-bold text-primary">Estiven</h2>
+                                    <p class="text-muted mb-3">
+                                        <i class="bi bi-geo-alt-fill me-1"></i>Bilbao, España
+                                    </p>
+                                    <p class="text-muted mb-3">
+                                        <i class="bi bi-calendar-event me-1"></i>25 años
+                                    </p>
+                                    <button class="btn btn-info" id="btn-rotar" onclick="rotarImagen()">
+                                        <i class="bi bi-arrow-clockwise me-1"></i>Rotar imagen
+                                    </button>
+                                </div>
+                                
+                                <div class="col-lg-8">
+                                    <h3 class="text-primary mb-3">Sobre mí</h3>
+                                    <p class="lead mb-4">
+                                        Soy un desarrollador especializado en inteligencia artificial y machine learning. 
+                                        Me fascina crear sistemas inteligentes que puedan resolver problemas complejos. 
+                                        Tengo experiencia en análisis de datos y desarrollo de algoritmos predictivos.
+                                    </p>
+                                    
+                                    <h4 class="text-primary mb-3">Habilidades</h4>
+                                    <div class="skills-list mb-4" id="skills-container">
+                                        <span class="skill-tag">Python</span>
+                                        <span class="skill-tag">TensorFlow</span>
+                                        <span class="skill-tag">PyTorch</span>
+                                        <span class="skill-tag">Scikit-learn</span>
+                                        <span class="skill-tag">Pandas</span>
+                                        <span class="skill-tag">NumPy</span>
+                                        <span class="skill-tag">SQL</span>
+                                    </div>
+                                    
+                                    <h4 class="text-primary mb-3">Experiencia</h4>
+                                    <div class="mb-4">
+                                        <h5 class="fw-bold">Data Scientist</h5>
+                                        <p class="text-muted mb-2">AI Solutions Corp • 2022 - Presente</p>
+                                        <p>Desarrollo de modelos de machine learning para análisis predictivo y automatización de procesos.</p>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <h5 class="fw-bold">Analista de Datos</h5>
+                                        <p class="text-muted mb-2">DataTech Analytics • 2020 - 2022</p>
+                                        <p>Análisis de grandes volúmenes de datos y creación de dashboards interactivos para la toma de decisiones.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Favoritos -->
+    <section class="py-5 bg-light favorites-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-center mb-5 text-primary">Mis Favoritos</h3>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-cpu display-4 text-primary mb-3"></i>
+                                    <h5 class="card-title">Inteligencia Artificial</h5>
+                                    <p class="card-text">Desarrollar sistemas inteligentes que aprendan y se adapten.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-graph-up display-4 text-warning mb-3"></i>
+                                    <h5 class="card-title">Análisis de Datos</h5>
+                                    <p class="card-text">Extraer insights valiosos de grandes conjuntos de datos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100 shadow-sm">
+                                <div class="card-body text-center">
+                                    <i class="bi bi-book display-4 text-success mb-3"></i>
+                                    <h5 class="card-title">Aprendizaje Continuo</h5>
+                                    <p class="card-text">Mantenerme actualizado con las últimas tendencias en tecnología.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Favoritos Adicionales -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary mb-4">
+                                <i class="bi bi-film me-2"></i>Películas Favoritas
+                            </h4>
+                            <ul class="favorites-list">
+                                <li>
+                                    <strong>2001: A Space Odyssey</strong>
+                                    <p class="mb-0 text-muted">Una obra maestra que explora la evolución de la inteligencia artificial.</p>
+                                </li>
+                                <li>
+                                    <strong>The Imitation Game</strong>
+                                    <p class="mb-0 text-muted">La historia de Alan Turing y los orígenes de la computación moderna.</p>
+                                </li>
+                                <li>
+                                    <strong>Minority Report</strong>
+                                    <p class="mb-0 text-muted">Fascinante visión del análisis predictivo y la tecnología del futuro.</p>
+                                </li>
+                                <li>
+                                    <strong>A Beautiful Mind</strong>
+                                    <p class="mb-0 text-muted">La brillantez matemática y los patrones en el caos me inspiran.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary mb-4">
+                                <i class="bi bi-music-note-beamed me-2"></i>Música Favorita
+                            </h4>
+                            <ul class="favorites-list">
+                                <li>
+                                    <strong>Max Richter - Sleep</strong>
+                                    <p class="mb-0 text-muted">Música minimalista perfecta para análisis de datos profundos.</p>
+                                </li>
+                                <li>
+                                    <strong>Ólafur Arnalds - Re:member</strong>
+                                    <p class="mb-0 text-muted">Combina piano y algoritmos, perfecto para mi trabajo en IA.</p>
+                                </li>
+                                <li>
+                                    <strong>Nils Frahm - All Melody</strong>
+                                    <p class="mb-0 text-muted">Música experimental que estimula la creatividad algorítmica.</p>
+                                </li>
+                                <li>
+                                    <strong>Brian Eno - Music for Airports</strong>
+                                    <p class="mb-0 text-muted">Ambient clásico ideal para sesiones largas de machine learning.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botón Volver Arriba -->
+    <button class="btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle" 
+            style="width: 50px; height: 50px; z-index: 1000;" 
+            onclick="scrollSuave('top')" 
+            title="Volver arriba">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Equipo Innovador</h5>
+                    <p class="mb-0">Desarrollando el futuro, un proyecto a la vez.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">&copy; 2024 Equipo Innovador. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript personalizado -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora del Proyecto - Equipo Innovador</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="img/logo.svg" alt="Logo" width="40" height="40" class="me-2">
+                Equipo Innovador
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house-fill me-1"></i>Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-people-fill me-1"></i>Integrantes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="lucas.html">Lucas</a></li>
+                            <li><a class="dropdown-item" href="victoria.html">Victoria</a></li>
+                            <li><a class="dropdown-item" href="sebastian.html">Sebastián</a></li>
+                            <li><a class="dropdown-item" href="luis.html">Luis</a></li>
+                            <li><a class="dropdown-item" href="estiven.html">Estiven</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="bitacora.html">
+                            <i class="bi bi-journal-text me-1"></i>Bitácora
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light btn-sm ms-2" id="btn-tema" title="Cambiar tema">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 50vh;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center text-white">
+                    <h1 class="display-4 fw-bold mb-4 fade-in">
+                        <i class="bi bi-journal-bookmark me-3"></i>
+                        Bitácora del Proyecto
+                    </h1>
+                    <p class="lead mb-4 fade-in">
+                        Registro detallado del proceso de desarrollo, decisiones tomadas y desafíos superados
+                    </p>
+                    <button class="btn btn-light btn-lg" onclick="scrollSuave('contenido')">
+                        <i class="bi bi-arrow-down me-2"></i>Ver desarrollo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenido Principal -->
+    <section class="py-5" id="contenido">
+        <div class="container">
+            <!-- Resumen del Proyecto -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="card shadow-lg border-0">
+                        <div class="card-body p-5">
+                            <h2 class="text-primary mb-4">
+                                <i class="bi bi-info-circle me-2"></i>
+                                Resumen del Proyecto
+                            </h2>
+                            <p class="lead mb-4">
+                                Este proyecto consiste en el desarrollo de un sitio web responsivo para presentar a nuestro equipo de trabajo, 
+                                utilizando tecnologías modernas como Bootstrap, CSS personalizado y JavaScript interactivo.
+                            </p>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="text-center p-3 bg-light rounded">
+                                        <i class="bi bi-calendar-event text-primary fs-1"></i>
+                                        <h5 class="mt-2">Duración</h5>
+                                        <p class="mb-0">2 semanas</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="text-center p-3 bg-light rounded">
+                                        <i class="bi bi-people text-success fs-1"></i>
+                                        <h5 class="mt-2">Integrantes</h5>
+                                        <p class="mb-0">3 desarrolladores</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="text-center p-3 bg-light rounded">
+                                        <i class="bi bi-code-slash text-warning fs-1"></i>
+                                        <h5 class="mt-2">Tecnologías</h5>
+                                        <p class="mb-0">HTML, CSS, JS, Bootstrap</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline de Desarrollo -->
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-primary mb-5 text-center">
+                        <i class="bi bi-clock-history me-2"></i>
+                        Timeline de Desarrollo
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Fase 1: Planificación -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="card border-start border-primary border-4 shadow">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary text-white rounded-circle p-3 me-3">
+                                    <i class="bi bi-lightbulb fs-4"></i>
+                                </div>
+                                <div>
+                                    <h3 class="mb-1">Fase 1: Planificación y Diseño</h3>
+                                    <small class="text-muted">Días 1-3</small>
+                                </div>
+                            </div>
+                            
+                            <h5 class="text-primary">Decisiones de Diseño:</h5>
+                            <ul class="mb-4">
+                                <li><strong>Paleta de colores:</strong> Decidimos usar una paleta moderna con tonos azules y gradientes para transmitir profesionalismo e innovación.</li>
+                                <li><strong>Tipografía:</strong> Seleccionamos Google Fonts (Poppins y Roboto) para mejorar la legibilidad y estética.</li>
+                                <li><strong>Layout:</strong> Optamos por un diseño de tarjetas (cards) para organizar la información de manera clara y atractiva.</li>
+                                <li><strong>Navegación:</strong> Implementamos una barra de navegación fija con dropdown para facilitar el acceso a todas las secciones.</li>
+                            </ul>
+                            
+                            <h5 class="text-primary">Estructura del Proyecto:</h5>
+                            <ul>
+                                <li>Organización de archivos en carpetas separadas (css/, js/, img/)</li>
+                                <li>Definición de la arquitectura de páginas (index, perfiles individuales, bitácora)</li>
+                                <li>Planificación de componentes reutilizables</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fase 2: Desarrollo Frontend -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="card border-start border-success border-4 shadow">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-success text-white rounded-circle p-3 me-3">
+                                    <i class="bi bi-code-slash fs-4"></i>
+                                </div>
+                                <div>
+                                    <h3 class="mb-1">Fase 2: Desarrollo Frontend</h3>
+                                    <small class="text-muted">Días 4-10</small>
+                                </div>
+                            </div>
+                            
+                            <h5 class="text-success">Implementaciones Realizadas:</h5>
+                            <ul class="mb-4">
+                                <li><strong>Bootstrap Integration:</strong> Integración completa de Bootstrap 5 para el sistema de grid y componentes.</li>
+                                <li><strong>CSS Personalizado:</strong> Desarrollo de estilos custom con variables CSS para mantener consistencia.</li>
+                                <li><strong>Responsive Design:</strong> Implementación de breakpoints en 400px, 900px y 1200px.</li>
+                                <li><strong>Componentes Interactivos:</strong> Creación de tarjetas animadas, botones con efectos hover y transiciones suaves.</li>
+                            </ul>
+                            
+                            <h5 class="text-success">Dificultades Encontradas:</h5>
+                            <ul>
+                                <li><strong>Compatibilidad de Breakpoints:</strong> Inicialmente tuvimos problemas con el diseño en dispositivos móviles pequeños. Lo resolvimos ajustando los márgenes y paddings específicamente para el breakpoint de 400px.</li>
+                                <li><strong>Optimización de Imágenes:</strong> Las imágenes PNG iniciales eran muy pesadas. Decidimos cambiar a SVG para los avatares, mejorando significativamente el rendimiento.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fase 3: JavaScript e Interactividad -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="card border-start border-warning border-4 shadow">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-warning text-white rounded-circle p-3 me-3">
+                                    <i class="bi bi-lightning fs-4"></i>
+                                </div>
+                                <div>
+                                    <h3 class="mb-1">Fase 3: JavaScript e Interactividad</h3>
+                                    <small class="text-muted">Días 11-12</small>
+                                </div>
+                            </div>
+                            
+                            <h5 class="text-warning">Funcionalidades Implementadas:</h5>
+                            <ul class="mb-4">
+                                <li><strong>Tema Dinámico:</strong> Sistema de cambio entre modo claro y oscuro con persistencia en localStorage.</li>
+                                <li><strong>Animaciones CSS:</strong> Efectos de fade-in, hover y transiciones suaves en todos los elementos.</li>
+                                <li><strong>Interacciones Específicas:</strong> Cada página individual tiene funciones únicas (rotación de imágenes, animación de habilidades, etc.).</li>
+                                <li><strong>Scroll Suave:</strong> Navegación fluida entre secciones de la página.</li>
+                                <li><strong>Contadores Animados:</strong> Estadísticas que se animan al hacer scroll.</li>
+                            </ul>
+                            
+                            <h5 class="text-warning">Desafíos Superados:</h5>
+                            <ul>
+                                <li><strong>Gestión del Estado:</strong> Implementamos un sistema centralizado para manejar el tema y las preferencias del usuario.</li>
+                                <li><strong>Performance:</strong> Optimizamos las animaciones para evitar reflows innecesarios del DOM.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fase 4: Testing y Optimización -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="card border-start border-danger border-4 shadow">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-danger text-white rounded-circle p-3 me-3">
+                                    <i class="bi bi-bug fs-4"></i>
+                                </div>
+                                <div>
+                                    <h3 class="mb-1">Fase 4: Testing y Optimización</h3>
+                                    <small class="text-muted">Días 13-14</small>
+                                </div>
+                            </div>
+                            
+                            <h5 class="text-danger">Pruebas Realizadas:</h5>
+                            <ul class="mb-4">
+                                <li><strong>Responsive Testing:</strong> Verificación en múltiples dispositivos y tamaños de pantalla.</li>
+                                <li><strong>Cross-browser Compatibility:</strong> Pruebas en Chrome, Firefox, Safari y Edge.</li>
+                                <li><strong>Performance Testing:</strong> Optimización de carga de recursos y tiempo de respuesta.</li>
+                                <li><strong>Accessibility Testing:</strong> Verificación de contraste de colores y navegación por teclado.</li>
+                            </ul>
+                            
+                            <h5 class="text-danger">Cambios Importantes:</h5>
+                            <ul>
+                                <li><strong>Optimización de CSS:</strong> Refactorización del código CSS para reducir redundancias.</li>
+                                <li><strong>Mejora de Accesibilidad:</strong> Agregamos atributos ARIA y mejorado el contraste de colores.</li>
+                                <li><strong>Compresión de Recursos:</strong> Minificación de archivos CSS y JS para producción.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tecnologías Utilizadas -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="card shadow-lg border-0">
+                        <div class="card-body p-5">
+                            <h2 class="text-primary mb-4 text-center">
+                                <i class="bi bi-gear me-2"></i>
+                                Tecnologías y Herramientas
+                            </h2>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <h5 class="text-primary">Frontend</h5>
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-check-circle text-success me-2"></i>HTML5 semántico</li>
+                                        <li><i class="bi bi-check-circle text-success me-2"></i>CSS3 con variables y flexbox</li>
+                                        <li><i class="bi bi-check-circle text-success me-2"></i>Bootstrap 5.3.0</li>
+                                        <li><i class="bi bi-check-circle text-success me-2"></i>JavaScript ES6+</li>
+                                        <li><i class="bi bi-check-circle text-success me-2"></i>Google Fonts (Poppins, Roboto)</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <h5 class="text-primary">Herramientas</h5>
+                                    <ul class="list-unstyled">
+                                        <li><i class="bi bi-check-circle text-success me-2"></i>Bootstrap Icons</li>
+                                        <li><i class="bi bi-check-circle text-success me-2"></i>SVG para gráficos vectoriales</li>
+                                        <li><i class="bi bi-check-circle text-success me-2"></i>CSS Grid y Flexbox</li>
+                                        <li><i class="bi bi-check-circle text-success me-2"></i>Media queries responsivas</li>
+                                        <li><i class="bi bi-check-circle text-success me-2"></i>LocalStorage para persistencia</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lecciones Aprendidas -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="card bg-light border-0 shadow">
+                        <div class="card-body p-5">
+                            <h2 class="text-primary mb-4 text-center">
+                                <i class="bi bi-mortarboard me-2"></i>
+                                Lecciones Aprendidas
+                            </h2>
+                            <div class="row">
+                                <div class="col-lg-6 mb-4">
+                                    <h5 class="text-success">Aspectos Positivos</h5>
+                                    <ul>
+                                        <li>La planificación inicial detallada nos ahorró mucho tiempo durante el desarrollo.</li>
+                                        <li>El uso de Bootstrap aceleró significativamente el proceso de maquetación.</li>
+                                        <li>Las variables CSS facilitaron el mantenimiento y la consistencia del diseño.</li>
+                                        <li>La colaboración en equipo mejoró la calidad del código final.</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <h5 class="text-warning">Áreas de Mejora</h5>
+                                    <ul>
+                                        <li>Necesitamos mejorar nuestras pruebas de accesibilidad desde el inicio.</li>
+                                        <li>La optimización de performance debería ser considerada desde las primeras fases.</li>
+                                        <li>Documentar mejor el código durante el desarrollo, no al final.</li>
+                                        <li>Implementar un sistema de versionado más robusto para futuros proyectos.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón interactivo -->
+            <div class="text-center">
+                <button class="btn btn-primary btn-lg" onclick="mostrarResumen()">
+                    <i class="bi bi-file-text me-2"></i>Generar Resumen Ejecutivo
+                </button>
+            </div>
+
+            <!-- Resumen Ejecutivo (oculto inicialmente) -->
+            <div id="resumen-ejecutivo" class="mt-5" style="display: none;">
+                <div class="card border-primary">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">
+                            <i class="bi bi-file-earmark-text me-2"></i>
+                            Resumen Ejecutivo del Proyecto
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="lead">
+                            El proyecto "Equipo Innovador" se completó exitosamente en 14 días, cumpliendo con todos los requerimientos establecidos. 
+                            Se desarrolló un sitio web responsivo y moderno que presenta a nuestro equipo de manera profesional y atractiva.
+                        </p>
+                        <h6>Logros Principales:</h6>
+                        <ul>
+                            <li>✅ Sitio web 100% responsivo con breakpoints optimizados</li>
+                            <li>✅ Interactividad avanzada con JavaScript</li>
+                            <li>✅ Diseño moderno y profesional</li>
+                            <li>✅ Código limpio y bien documentado</li>
+                            <li>✅ Excelente experiencia de usuario</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Bitácora del Proyecto</h5>
+                    <p class="mb-0">Documentación completa del proceso de desarrollo</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="index.html" class="btn btn-outline-light">
+                        <i class="bi bi-house me-1"></i>Volver al inicio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript personalizado -->
+    <script src="js/main.js"></script>
+    
+    <!-- Script específico para la bitácora -->
+    <script>
+        function mostrarResumen() {
+            const resumen = document.getElementById('resumen-ejecutivo');
+            
+            if (resumen.style.display === 'none') {
+                resumen.style.display = 'block';
+                resumen.style.opacity = '0';
+                resumen.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    resumen.style.transition = 'all 0.5s ease';
+                    resumen.style.opacity = '1';
+                    resumen.style.transform = 'translateY(0)';
+                }, 100);
+                
+                // Scroll suave hacia el resumen
+                setTimeout(() => {
+                    resumen.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 300);
+                
+                mostrarAlerta('Resumen ejecutivo generado! 📋', 'success');
+            } else {
+                resumen.style.opacity = '0';
+                resumen.style.transform = 'translateY(-20px)';
+                setTimeout(() => {
+                    resumen.style.display = 'none';
+                }, 500);
+            }
+        }
+        
+        // Animación de entrada para las tarjetas
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+                card.style.transitionDelay = `${index * 0.1}s`;
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
