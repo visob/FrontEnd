@@ -230,3 +230,235 @@
         right: 10px;
     }
 }
+
+/* Estilos adicionales específicos para Estiven */
+
+/* Carrusel 3D de Música */
+.carousel-3d-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.carousel-3d {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.carousel-3d-item {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    left: 0;
+    top: 0;
+    transform-origin: center center;
+    transition: all 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+    opacity: 0.7;
+}
+
+.carousel-3d-item.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+.carousel-3d-item:nth-child(1) {
+    transform: rotateY(0deg) translateZ(250px);
+}
+
+.carousel-3d-item:nth-child(2) {
+    transform: rotateY(90deg) translateZ(250px);
+}
+
+.carousel-3d-item:nth-child(3) {
+    transform: rotateY(180deg) translateZ(250px);
+}
+
+.carousel-3d-item:nth-child(4) {
+    transform: rotateY(270deg) translateZ(250px);
+}
+
+.music-card {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.music-image {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.song-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.music-card:hover .song-image {
+    transform: scale(1.05);
+}
+
+.music-icon {
+    margin-bottom: 20px;
+    font-size: 4rem;
+}
+
+.music-icon i {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.music-card h5 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.music-card p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.carousel-3d-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    pointer-events: none;
+    z-index: 20;
+}
+
+.carousel-3d-btn {
+    background: #764ba29d;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    pointer-events: all;
+}
+
+.carousel-3d-btn:hover {
+    background: rgba(53, 6, 93, 0.677);
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-3d-indicators {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 20;
+}
+
+.carousel-3d-indicators .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #667eea;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-3d-indicators .indicator.active {
+    background: #667eea;
+    transform: scale(1.2);
+}
+
+.carousel-3d-indicators .indicator:hover {
+    background: #667eea;
+    transform: scale(1.1);
+}
+
+/* Animaciones adicionales */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.carousel-3d-item.active .music-card {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-3d-container {
+        height: 400px;
+        perspective: 800px;
+    }
+    
+    .carousel-3d {
+        width: 250px;
+        height: 320px;
+    }
+    
+    .carousel-3d-item {
+        width: 250px;
+        height: 320px;
+    }
+    
+    .carousel-3d-item:nth-child(1),
+    .carousel-3d-item:nth-child(2),
+    .carousel-3d-item:nth-child(3),
+    .carousel-3d-item:nth-child(4) {
+        transform: rotateY(calc(var(--rotation, 0) * 90deg)) translateZ(200px);
+    }
+    
+    .music-card {
+        padding: 20px;
+    }
+    
+    .music-card h5 {
+        font-size: 1.1rem;
+    }
+    
+    .music-card p {
+        font-size: 0.8rem;
+    }
+}

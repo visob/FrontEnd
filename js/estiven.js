@@ -189,6 +189,94 @@ function mezclarFavoritos(listId) {
     });
 }
 
+// Función para mostrar/ocultar el botón de scroll to top
+function toggleScrollButton() {
+    const scrollButton = document.getElementById('scrollToTop');
+    if (scrollButton) {
+        if (window.pageYOffset > 300) {
+            scrollButton.style.display = 'block';
+        } else {
+            scrollButton.style.display = 'none';
+        }
+    }
+}
+
+// Función para hacer scroll suave al top
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Variables para el carrusel 3D
+let currentSlide = 0;
+const totalSlides = 4;
+
+// Función para rotar el carrusel 3D
+function rotateCarousel(direction) {
+    currentSlide += direction;
+    
+    if (currentSlide >= totalSlides) {
+        currentSlide = 0;
+    } else if (currentSlide < 0) {
+        currentSlide = totalSlides - 1;
+    }
+    
+    updateCarousel();
+}
+
+// Función para ir a un slide específico
+function goToSlide(slideIndex) {
+    currentSlide = slideIndex;
+    updateCarousel();
+}
+
+// Función para actualizar el carrusel
+function updateCarousel() {
+    const carousel = document.getElementById('musicCarousel3D');
+    const items = document.querySelectorAll('.carousel-3d-item');
+    const indicators = document.querySelectorAll('.carousel-3d-indicators .indicator');
+    
+    if (!carousel) return;
+    
+    // Rotar el carrusel
+    const rotation = currentSlide * -90;
+    carousel.style.transform = `rotateY(${rotation}deg)`;
+    
+    // Actualizar clases activas
+    items.forEach((item, index) => {
+        item.classList.toggle('active', index === currentSlide);
+    });
+    
+    // Actualizar indicadores
+    indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentSlide);
+    });
+}
+
+// Inicializar el carrusel 3D cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', function() {
+    // Inicializar el carrusel 3D después de un pequeño delay
+    setTimeout(() => {
+        updateCarousel();
+        
+        // Auto-rotación opcional (comentado por defecto)
+        // setInterval(() => {
+        //     rotateCarousel(1);
+        // }, 5000);
+    }, 500);
+    
+    // Agregar soporte para navegación con teclado
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') {
+            rotateCarousel(-1);
+        } else if (e.key === 'ArrowRight') {
+            rotateCarousel(1);
+        }
+    });
+});
+
 // Agregar estilos de animación CSS dinámicamente
 const style = document.createElement('style');
 style.textContent = `
