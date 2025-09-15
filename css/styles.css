@@ -6,15 +6,16 @@
 
 /* Variables CSS */
 :root {
-  --primary-color: #2c3e50;
-  --secondary-color: #3498db;
-  --accent-color: #e74c3c;
+  --primary-color: #000046;
+  --secondary-color: #1CB5E0;
+  --accent-color: #c02dc2;
   --text-color: #2c3e50;
   --light-bg: #ecf0f1;
   --white: #ffffff;
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --border-radius: 10px;
 }
+
 
 /* Estilos generales */
 * {
@@ -32,7 +33,9 @@ body {
 
 /* Header y navegación */
 .navbar {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  
+  background: var(--primary-color);
+  opacity: 0,8;
   box-shadow: var(--shadow);
   padding: 1rem 0;
 }
@@ -57,11 +60,14 @@ body {
 
 /* Hero section */
 .hero {
+  position: relative;
+  overflow: hidden;
   background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
   color: var(--white);
   padding: 4rem 0;
-  text-align: center;
+  text-align: left;
 }
+
 
 .hero h1 {
   font-size: 3rem;
@@ -70,10 +76,40 @@ body {
   animation: fadeInUp 1s ease;
 }
 
+
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
   animation: fadeInUp 1s ease 0.2s both;
+}
+
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Oscurece (0.5 = 50% opacidad) */
+  z-index: 1;
+}
+
+
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 /* Cards */
@@ -113,15 +149,18 @@ body {
 
 /* Botones */
 .btn-primary {
-  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  background-image: linear-gradient(to right, #000046 0%, #1CB5E0 51%, #000046 100%);
   border: none;
-  border-radius: 25px;
+  border-radius: 15px;
   padding: 0.75rem 2rem;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: 0.5s;
+  background-size: 200% auto;
+  display: block;
 }
 
 .btn-primary:hover {
+  background-position: right center; /* change the direction of the change here */
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
 }
