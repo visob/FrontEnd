@@ -10,7 +10,7 @@
   --secondary-color: #243949;
   --accent-color: #c02dc2;
   --text-color: #2c3e50;
-  --light-bg: #cdd9e5;
+  --light-bg: #d8e1ea;
   --white: #ffffff;
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --border-radius: 10px;
@@ -29,6 +29,10 @@ body {
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--light-bg);
+}
+
+body.trama {
+background-image: linear-gradient(135deg, #f5f7fa 0%, #8cace1 100%);
 }
 
 /* Header y navegación */
@@ -186,7 +190,7 @@ footer {
   background: var(--primary-color);
   color: var(--white);
   padding: 2rem 0;
-  text-align: center;
+  text-align: left;
   margin-top: 3rem;
 }
 
@@ -451,4 +455,22 @@ body.dark-theme .dropdown-item:hover {
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
+}
+
+.text-primary {
+  color: #243949 !important;
+}
+
+.text-center {
+  text-align: left !important;
+}
+
+.parrafo-equipo {
+  max-width: 750px;
+
+}
+
+.bg-primary {
+    background-color: #517fa4 !important;
+    opacity: 0.6;
 }
