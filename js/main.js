@@ -189,6 +189,12 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('dark-theme');
     }
     
+       // Inicializar efecto typeWriter
+    const tituloElement = document.getElementById('typing-title');
+    if (tituloElement) {
+        typeWriter(tituloElement, "Equipo Innovador", 100);
+    }
+
     // Animar tarjetas si existen
     if (document.querySelectorAll('.card').length > 0) {
         setTimeout(animarTarjetas, 500);
@@ -267,4 +273,19 @@ if (!document.getElementById('dark-theme-styles')) {
     style.id = 'dark-theme-styles';
     style.textContent = darkThemeStyles;
     document.head.appendChild(style);
+}
+
+function typeWriter(element, text, speed = 20) {
+    let i = 0;
+    element.innerHTML = ''; // Limpia el contenido inicial
+    
+    function typing() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typing, speed);
+        }
+    }
+    
+    typing();
 }

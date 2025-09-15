@@ -15,7 +15,11 @@ body {
 .profile-card {
     max-width: 1000px !important; /* más grande que los 800px que tenía en styles.css */
     opacity: 0.7;                /* menos opacidad */
-    background-color: rgba(255, 230, 249, 0.85);
+    background-color: rgba(255, 230, 249, 0.85) !important;
+}
+
+.profile-card .card-body {
+  background: none;
 }
 
 .text-primary {

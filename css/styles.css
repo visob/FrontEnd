@@ -6,11 +6,11 @@
 
 /* Variables CSS */
 :root {
-  --primary-color: #000046;
-  --secondary-color: #1CB5E0;
+  --primary-color: #517fa4;
+  --secondary-color: #243949;
   --accent-color: #c02dc2;
   --text-color: #2c3e50;
-  --light-bg: #ecf0f1;
+  --light-bg: #cdd9e5;
   --white: #ffffff;
   --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --border-radius: 10px;
@@ -34,8 +34,8 @@ body {
 /* Header y navegación */
 .navbar {
   
-  background: var(--primary-color);
-  opacity: 0,8;
+  background: black;
+  opacity: 0.9;
   box-shadow: var(--shadow);
   padding: 1rem 0;
 }
@@ -149,7 +149,8 @@ body {
 
 /* Botones */
 .btn-primary {
-  background-image: linear-gradient(to right, #000046 0%, #1CB5E0 51%, #000046 100%);
+  
+  background-image: linear-gradient(to right, #517fa4 0%, #243949 51%, #517fa4 100%);
   border: none;
   border-radius: 15px;
   padding: 0.75rem 2rem;
@@ -157,6 +158,7 @@ body {
   transition: 0.5s;
   background-size: 200% auto;
   display: block;
+  color: white;
 }
 
 .btn-primary:hover {
@@ -439,4 +441,14 @@ body.dark-theme .dropdown-item:hover {
   z-index: 1; 
   background: rgba(0, 0, 0, 0.4); 
   border-radius: var(--border-radius);
+}
+
+#typing-title::after {
+    content: '|';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
