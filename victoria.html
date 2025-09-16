@@ -357,7 +357,14 @@ Diseñadora multimedia especializada en UX/UI. Lo que más me interesa es diseñ
     
 
     <script>
-
+        function mostrarCodigoEjemplo() {
+    // En vez de mostrar el div, lanzamos corazones
+    for (let i = 0; i < 20; i++) {
+        setTimeout(() => {
+            crearCorazon();
+        }, i * 200);
+    }
+}
 
 function crearCorazon() {
     const corazon = document.createElement('div');
@@ -377,10 +384,8 @@ function crearCorazon() {
         corazon.remove();
     }, 6000);
 }
-
-        
         document.addEventListener('DOMContentLoaded', function() {
-        
+            
             
             // Efecto de typing en el nombre
             const nombre = document.querySelector('h2.fw-bold');
