@@ -353,14 +353,7 @@ Diseñadora multimedia especializada en UX/UI. Lo que más me interesa es diseñ
     
 
     <script>
-        function mostrarCodigoEjemplo() {
-    // En vez de mostrar el div, lanzamos corazones
-    for (let i = 0; i < 20; i++) {
-        setTimeout(() => {
-            crearCorazon();
-        }, i * 200);
-    }
-}
+
 
 function crearCorazon() {
     const corazon = document.createElement('div');
@@ -383,13 +376,7 @@ function crearCorazon() {
 
         
         document.addEventListener('DOMContentLoaded', function() {
-            // Animación de contadores
-            setTimeout(() => {
-                contadorAnimado('lineas-codigo', 50000, 2000);
-                contadorAnimado('apis-creadas', 25, 1500);
-                contadorAnimado('bugs-resueltos', 342, 2500);
-                contadorAnimado('commits', 1250, 3000);
-            }, 500);
+        
             
             // Efecto de typing en el nombre
             const nombre = document.querySelector('h2.fw-bold');
@@ -407,23 +394,8 @@ function crearCorazon() {
                 }, 100);
             }
             
-            // Animación de las habilidades al cargar
-            const skills = document.querySelectorAll('.skill-tag');
-            skills.forEach((skill, index) => {
-                skill.style.opacity = '0';
-                skill.style.transform = 'translateY(20px)';
-                setTimeout(() => {
-                    skill.style.transition = 'all 0.5s ease';
-                    skill.style.opacity = '1';
-                    skill.style.transform = 'translateY(0)';
-                }, index * 100);
-            });
         });
     </script>
-
-    <div id="mini-juego">
-  <div id="jugador"></div>
-</div>
 
 
 </body>
