@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/victoria-favicon.png">
+
     <title>Victoria - Perfil</title>
     
     <!-- Bootstrap CSS -->
@@ -81,69 +83,31 @@
                                         <i class="bi bi-calendar-event me-1"></i>23 años
                                     </p>
                                     <button class="btn btn-success" id="btn-codigo" onclick="mostrarCodigoEjemplo()">
-                                        <i class="bi bi-code-slash me-1"></i>Ver código
+                                        <i class="bi me-1"></i>¡Qué llueva!
                                     </button>
                                 </div>
                                 
                                 <div class="col-lg-8">
                                     <h3 class="text-primary mb-3">Sobre mí</h3>
                                     <p class="lead mb-4">
-"Soy diseñadora multimedia especializada en UX/UI. Lo que más me interesa es diseñar aplicaciones desde cero y luego darles vida a través de interfaces intuitivas y visualmente atractivas. Me apasiona transformar ideas en productos digitales coherentes, usables y funcionales, combinando el diseño con la programación para crear experiencias completas y bien pensadas.                                    </p>
+Soy diseñadora multimedia especializada en UX/UI. Lo que más me interesa es diseñar aplicaciones desde cero y luego darles vida a través de interfaces intuitivas y visualmente atractivas. Me apasiona transformar ideas en productos digitales coherentes, usables y funcionales, combinando el diseño con la programación para crear experiencias completas y bien pensadas.                                    </p>
                                     
                                     <h4 class="text-primary mb-3">Habilidades</h4>
                                     <div class="skills-list mb-4">
                                         <span class="skill-tag">Figma</span>
                                         <span class="skill-tag">Adobe Suit</span>
+                                        <span class="skill-tag">Prototipado</span>
                                         <span class="skill-tag">HTML</span>
                                         <span class="skill-tag">CSS</span>
                                         <span class="skill-tag">JavaScript</span>
                                         <span class="skill-tag">Kotlin</span>
                                     </div>
+                                
+                                 
                                     
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <button class="btn btn-outline-primary mb-3" onclick="toggleInfo('proyectos-destacados')">
-                                                <i class="bi bi-folder me-1"></i>Proyectos destacados
-                                            </button>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <button class="btn btn-outline-warning" onclick="cambiarColoresHabilidades()">
-                                                <i class="bi bi-lightning me-1"></i>Animar habilidades
-                                            </button>
-                                        </div>
-                                    </div>
+                    
                                     
-                                    <div id="proyectos-destacados" style="display: none;" class="mt-3 p-3 bg-light rounded">
-                                        <h5>Proyectos destacados</h5>
-                                        <ul>
-                                            <li><strong>Deboot:</strong> App de busqueda de trabajo para estudiantes</li>
-                                            <li><strong>Chat en tiempo real:</strong> Aplicación con WebSockets y Redis</li>
-                                            <li><strong>Sistema de gestión:</strong> Microservicios con Docker y Kubernetes</li>
-                                            <li><strong>Bot de Telegram:</strong> Automatización de tareas con Python</li>
-                                        </ul>
-                                    </div>
-                                    
-                                    <div id="codigo-ejemplo" style="display: none;" class="mt-3 p-3 bg-dark text-light rounded">
-                                        <h5 class="text-warning">Ejemplo de código Node.js</h5>
-                                        <pre><code>const express = require('express');
-const app = express();
-
-app.get('/api/users', async (req, res) => {
-  try {
-    const users = await User.find();
-    res.json({ success: true, data: users });
-  } catch (error) {
-    res.status(500).json({ 
-      success: false, 
-      message: error.message 
-    });
-  }
-});
-
-app.listen(3000, () => {
-  console.log('Servidor corriendo en puerto 3000');
-});</code></pre>
-                                    </div>
+                                
                                 </div>
                             </div>
                         </div>
@@ -152,6 +116,100 @@ app.listen(3000, () => {
             </div>
         </div>
     </section>
+
+    <!-- Showcase de Proyectos -->
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="card profile-card shadow-lg mt-4">
+          <div class="card-body p-4">
+            <!-- Encabezado clickeable -->
+            <h3 class="text-primary mb-0 d-flex justify-content-between align-items-center" 
+                style="cursor: pointer;" 
+                data-bs-toggle="collapse" data-bs-target="#showcaseProyectos">
+              Proyectos destacados
+              <i class="bi bi-chevron-down"></i>
+            </h3>
+          </div>
+
+          <!-- Contenido oculto -->
+          <div id="showcaseProyectos" class="collapse">
+            <div class="card-body pt-0">
+              <div id="carouselProyectos" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                  <!-- Proyecto 1 -->
+                  <div class="carousel-item active">
+                    <div class="row align-items-center">
+                      <div class="col-md-6">
+                        <img src="img/victoria-deboot.png" class="img-fluid rounded shadow-sm" alt="Deboot">
+                      </div>
+                      <div class="col-md-6">
+                        <h4 class="text-primary">Deboot</h4>
+                        <p class="text-muted">
+                          Deboot es una aplicación diseñada específicamente para ayudar a los estudiantes universitarios a encontrar empleo. Ofrece una conexión directa con empresas que buscan talento joven y proporciona oportunidades de pasantías y empleos a medio tiempo, facilitando la transición del ámbito académico al profesional.
+                        </p>
+                        <a href="https://www.figma.com/proto/REgjL9uQTrCKBtY75HD29B/Deboot?page-id=770%3A10540&node-id=770-11704&p=f&viewport=528%2C1022%2C0.04&t=OjVqIR37nmRkxoyT-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=770%3A11696" target="_blank" rel="noopener noreferrer" class="btn btn-success mt-2">
+        Conoce el proyecto
+      </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Proyecto 2 -->
+                  <div class="carousel-item">
+                    <div class="row align-items-center">
+                      <div class="col-md-6">
+                        <img src="img/victoria-hyped.png" class="img-fluid rounded shadow-sm" alt="Hyped">
+                      </div>
+                      <div class="col-md-6">
+                        <h4 class="text-primary">Hyped</h4>
+                        <p class="text-muted">
+                          Hyped es una aplicación destinada a descubrir eventos y comprar entradas de manera fácil y emocionante. Con una interfaz intuitiva y emocionantes funcionalidades, te permite explorar una amplia variedad de eventos y asegurar tus entradas en pocos pasos, para que nunca te pierdas tus experiencias favoritas.
+                        </p>
+                         <a href="https://www.figma.com/proto/paQ5YEosDDSi5DOzWCowAu/HYPED---Event-App--Copy-?page-id=222%3A299&node-id=222-300&viewport=366%2C-2%2C0.12&t=zNvyxNiPJ5fxy0VC-1&scaling=scale-down&content-scaling=fixed" target="_blank" rel="noopener noreferrer" class="btn btn-success mt-2">
+        Conoce el proyecto
+      </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Proyecto 3 -->
+                  <div class="carousel-item">
+                    <div class="row align-items-center">
+                      <div class="col-md-6">
+                        <img src="img/victoria-interact.png" class="img-fluid rounded shadow-sm" alt="InteractxTech">
+                      </div>
+                      <div class="col-md-6">
+                        <h4 class="text-primary">InteractxTech</h4>
+                        <p class="text-muted">
+                          InteractxTech es un sitio web que sirve como un punto central para todo lo relacionado con la realidad virtual y aumentada. Puedes encontrar las últimas noticias, reseñas detalladas, tutoriales para desarrolladores y una comunidad apasionada por el panorama de la tecnología inmersiva.
+                        </p>
+                     <a href="https://www.figma.com/proto/1diO6i1TJgw2kV0o2e0837/InteractxTech--Behance-?page-id=901%3A13758&node-id=901-14625&p=f&viewport=-52%2C307%2C0.07&t=NnzLHGojKXjIHsqE-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=901%3A14625" target="_blank" rel="noopener noreferrer" class="btn btn-success mt-2">
+        Conoce el proyecto
+      </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Controles del carrusel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyectos" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProyectos" data-bs-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Sección de Favoritos -->
     <section class="py-5">
@@ -240,51 +298,6 @@ app.listen(3000, () => {
         </div>
     </section>
 
-    <!-- Sección de Estadísticas Técnicas -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-4">
-                    <h3 class="text-primary">Estadísticas de Desarrollo</h3>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-3 col-6 mb-3">
-                    <div class="card border-0 bg-transparent">
-                        <div class="card-body">
-                            <h4 class="text-success" id="lineas-codigo">0</h4>
-                            <p class="text-muted">Líneas de código</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6 mb-3">
-                    <div class="card border-0 bg-transparent">
-                        <div class="card-body">
-                            <h4 class="text-info" id="apis-creadas">0</h4>
-                            <p class="text-muted">APIs creadas</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6 mb-3">
-                    <div class="card border-0 bg-transparent">
-                        <div class="card-body">
-                            <h4 class="text-warning" id="bugs-resueltos">0</h4>
-                            <p class="text-muted">Bugs resueltos</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-6 mb-3">
-                    <div class="card border-0 bg-transparent">
-                        <div class="card-body">
-                            <h4 class="text-danger" id="commits">0</h4>
-                            <p class="text-muted">Commits en GitHub</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Navegación entre perfiles -->
     <section class="py-4 bg-primary text-white">
         <div class="container">
@@ -298,12 +311,14 @@ app.listen(3000, () => {
                         <div class="text-center">
                             <small>Otros integrantes:</small>
                             <div class="mt-2">
-                                <a href="ana-garcia.html" class="btn btn-sm btn-outline-light me-2">Ana</a>
-                                <a href="maria-lopez.html" class="btn btn-sm btn-outline-light">María</a>
+                                <a href="lucas.html" class="btn btn-sm btn-outline-light me-2">Lucas</a>
+                                <a href="sebastian.html" class="btn btn-sm btn-outline-light">Sebastian</a>
+                                <a href="estiven.html" class="btn btn-sm btn-outline-light">Estiven</a>
+                                <a href="jose.html" class="btn btn-sm btn-outline-light">Jose</a>
                             </div>
                         </div>
                         
-                        <a href="maria-lopez.html" class="btn btn-outline-light">
+                        <a href="sebastian.html" class="btn btn-outline-light">
                             Siguiente perfil<i class="bi bi-arrow-right ms-1"></i>
                         </a>
                     </div>
@@ -317,13 +332,13 @@ app.listen(3000, () => {
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h5>Carlos Rodríguez</h5>
-                    <p class="mb-0">Desarrollador Backend | Arquitecto de Software</p>
+                    <h5>Victoria</h5>
+                    <p class="mb-0">Diseñadora UX UI</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <p class="mb-0">
                         <i class="bi bi-envelope me-1"></i>
-                        carlos.rodriguez@equipoinnovador.com
+                        victoriadev@gmail.com
                     </p>
                     <div class="mt-2">
                         <button class="btn btn-outline-light btn-sm" onclick="scrollSuave('top')">
@@ -343,15 +358,33 @@ app.listen(3000, () => {
 
     <script>
         function mostrarCodigoEjemplo() {
-            const codigoDiv = document.getElementById('codigo-ejemplo');
-            if (codigoDiv.style.display === 'none' || codigoDiv.style.display === '') {
-                codigoDiv.style.display = 'block';
-                codigoDiv.style.animation = 'fadeInUp 0.5s ease';
-                mostrarAlerta('¡Código de ejemplo mostrado!', 'info');
-            } else {
-                codigoDiv.style.display = 'none';
-            }
-        }
+    // En vez de mostrar el div, lanzamos corazones
+    for (let i = 0; i < 20; i++) {
+        setTimeout(() => {
+            crearCorazon();
+        }, i * 200);
+    }
+}
+
+function crearCorazon() {
+    const corazon = document.createElement('div');
+    corazon.classList.add('corazon');
+    corazon.innerHTML = '🧚🏻‍♀️';
+
+    // Posición horizontal aleatoria
+    corazon.style.left = Math.random() * 100 + 'vw';
+
+    // Tamaño aleatorio
+    corazon.style.fontSize = (Math.random() * 20 + 20) + 'px';
+
+    document.body.appendChild(corazon);
+
+    // Borrar después de 4s
+    setTimeout(() => {
+        corazon.remove();
+    }, 6000);
+}
+
         
         document.addEventListener('DOMContentLoaded', function() {
             // Animación de contadores
@@ -391,5 +424,11 @@ app.listen(3000, () => {
             });
         });
     </script>
+
+    <div id="mini-juego">
+  <div id="jugador"></div>
+</div>
+
+
 </body>
 </html>
