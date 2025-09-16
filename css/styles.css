@@ -408,20 +408,7 @@ footer {
   }
 }
 
-/* Estilos para tema oscuro del dropdown */
-body.dark-theme .dropdown-menu {
-  background: rgba(44, 62, 80, 0.95);
-  backdrop-filter: blur(10px);
-}
 
-body.dark-theme .dropdown-item {
-  color: var(--white);
-}
-
-body.dark-theme .dropdown-item:hover {
-  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
-  color: var(--white);
-}
 
 .profile-card {
   position: relative;
