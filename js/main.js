@@ -2,24 +2,48 @@
 
 // Función para mostrar mensaje de bienvenida en la portada
 function mostrarBienvenida() {
-    const mensaje = document.createElement('div');
-    mensaje.className = 'alert alert-success alert-dismissible fade show';
-    mensaje.innerHTML = `
-        <strong>¡Bienvenido a nuestro equipo!</strong> Explora las páginas de cada integrante para conocer más sobre nosotros.
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    // Crear contenedor de toasts si no existe
+    let toastContainer = document.getElementById('toast-container');
+    if (!toastContainer) {
+        toastContainer = document.createElement('div');
+        toastContainer.id = 'toast-container';
+        toastContainer.className = 'toast-container position-fixed top-0 end-0 p-3';
+        toastContainer.style.zIndex = '9999';
+        document.body.appendChild(toastContainer);
+    }
+    
+    // Crear el toast
+    const toastElement = document.createElement('div');
+    toastElement.className = 'toast show';
+    toastElement.setAttribute('role', 'alert');
+    toastElement.setAttribute('aria-live', 'assertive');
+    toastElement.setAttribute('aria-atomic', 'true');
+    
+    toastElement.innerHTML = `
+        <div class="toast-header bg-success text-white">
+            <i class="bi bi-hand-thumbs-up me-2"></i>
+            <strong class="me-auto">¡Bienvenido!</strong>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            <strong>¡Bienvenido a nuestro equipo!</strong> Explora las páginas de cada integrante para conocer más sobre nosotros.
+        </div>
     `;
     
-    const container = document.querySelector('.container');
-    if (container) {
-        container.insertBefore(mensaje, container.firstChild);
-        
-        // Auto-ocultar después de 5 segundos
-        setTimeout(() => {
-            if (mensaje.parentNode) {
-                mensaje.remove();
-            }
-        }, 5000);
-    }
+    toastContainer.appendChild(toastElement);
+    
+    // Inicializar el toast de Bootstrap
+    const toast = new bootstrap.Toast(toastElement, {
+        autohide: true,
+        delay: 5000
+    });
+    
+    toast.show();
+    
+    // Remover el elemento del DOM después de que se oculte
+    toastElement.addEventListener('hidden.bs.toast', () => {
+        toastElement.remove();
+    });
 }
 
 // Función para animar las tarjetas al cargar
@@ -264,6 +288,29 @@ const darkThemeStyles = `
     
     .dark-theme footer {
         background-color: #1a1a1a !important;
+    }
+    
+    .dark-theme .bg-light {
+        background-color: #2d2d2d !important;
+        color: #ffffff !important;
+    }
+    
+    .dark-theme .favorites-section {
+        background-color: #2d2d2d !important;
+    }
+    
+    .dark-theme .music-card {
+        background-color: #3d3d3d !important;
+        color: #ffffff !important;
+    }
+    
+    .dark-theme .carousel-3d-item .music-card {
+        background-color: rgba(45, 45, 45, 0.9) !important;
+        color: #ffffff !important;
+    }
+    
+    .dark-theme .section-title {
+        color: #ffffff !important;
     }
 `;
 
