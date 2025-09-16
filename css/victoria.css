@@ -13,10 +13,19 @@ body {
 }
 
 .profile-card {
-    max-width: 1000px !important; /* más grande que los 800px que tenía en styles.css */
+    max-width: 1500px !important; /* más grande que los 800px que tenía en styles.css */
     opacity: 0.7;                /* menos opacidad */
     background-color: rgba(255, 230, 249, 0.85) !important;
 }
+.card {
+    opacity: 0.7;                /* menos opacidad */
+    background-color: rgba(255, 230, 249, 0.85) !important;
+}
+
+.favorites-list li {                /* menos opacidad */
+    background-color: rgba(255, 230, 249, 0.85) !important;
+}
+
 
 .profile-card .card-body {
   background: none;
@@ -74,4 +83,54 @@ body {
 .navbar-nav .nav-link:hover {
   color: var(--accent-color) !important;
   transform: translateY(-2px);
+}
+
+.corazon {
+  position: fixed;
+  top: -20px;
+  font-size: 24px;
+  color: #ff4d6d;
+  animation: caer 4s linear forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes caer {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.py-4{
+  background-color: #B5759F !important;
+  opacity: 1 !important;
+}
+
+.btn-success {
+  background-color: #B5759F !important;
+  border-color: #B5759F !important;
+}
+
+.mt-2 {
+  background-color: #B5759F !important;
+  border-color: #B5759F !important;
+}
+
+#carouselProyectos .carousel-item .row {
+  margin: 0 4rem; /* achica solo el contenido */
+}
+
+#carouselProyectos .carousel-control-prev,
+#carouselProyectos .carousel-control-next {
+  width: 5%; /* opcional: asegura que las flechas sigan pegadas a los bordes */
+}
+
+.py-5 {
+      padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
 }
