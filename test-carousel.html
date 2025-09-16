@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Carousel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .test-carousel {
+            max-width: 800px;
+            margin: 50px auto;
+        }
+        .carousel-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-5">Test de Carrusel</h1>
+        
+        <div id="testCarousel" class="carousel slide test-carousel" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#testCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#testCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#testCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#testCarousel" data-bs-slide-to="3"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div>
+                        <h3>Película 1: 2001: A Space Odyssey</h3>
+                        <p>Una obra maestra cinematográfica que explora la evolución de la inteligencia artificial.</p>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <div>
+                        <h3>Película 2: The Imitation Game</h3>
+                        <p>La fascinante historia de Alan Turing y los orígenes de la computación moderna.</p>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <div>
+                        <h3>Película 3: Minority Report</h3>
+                        <p>Una fascinante visión del análisis predictivo y la tecnología del futuro.</p>
+                    </div>
+                </div>
+                
+                <div class="carousel-item">
+                    <div>
+                        <h3>Película 4: A Beautiful Mind</h3>
+                        <p>La brillantez matemática de John Nash y su capacidad para encontrar patrones.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#testCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
