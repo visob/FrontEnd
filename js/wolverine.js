@@ -1,4 +1,3 @@
-// Lista de imágenes de Wolverine (carrusel)
 const imagenesLogan = [
   "img/logan.png",
   "img/logan2.jpeg",
@@ -11,14 +10,12 @@ let indiceImagen = 0;
 function cambiarImagen() {
   const img = document.getElementById("profile-image");
 
-  // Fade out
   img.style.opacity = 0;
 
   setTimeout(() => {
     indiceImagen = (indiceImagen + 1) % imagenesLogan.length;
     img.src = imagenesLogan[indiceImagen];
 
-    // Fade in
     img.style.opacity = 1;
   }, 400);
 }
@@ -56,3 +53,12 @@ function datoRandom() {
   alert(random);
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  var carrusel = document.querySelector('#carruselJose');
+  if (carrusel) {
+    new bootstrap.Carousel(carrusel, {
+      interval: 1300, 
+      ride: 'carousel'
+    });
+  }
+});
