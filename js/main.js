@@ -2,6 +2,24 @@
 
 // Función para mostrar mensaje de bienvenida en la portada
 function mostrarBienvenida() {
+    // Obtener la hora actual
+    const ahora = new Date();
+    const hora = ahora.getHours();
+    let saludo;
+    
+    if (hora < 12) {
+        saludo = '¡Buenos días!';
+    } else if (hora < 18) {
+        saludo = '¡Buenas tardes!';
+    } else {
+        saludo = '¡Buenas noches!';
+    }
+    
+    const horaFormateada = ahora.toLocaleTimeString('es-ES', {
+        hour: '2-digit',
+        minute: '2-digit'
+    });
+    
     // Crear contenedor de toasts si no existe
     let toastContainer = document.getElementById('toast-container');
     if (!toastContainer) {
@@ -22,7 +40,8 @@ function mostrarBienvenida() {
     toastElement.innerHTML = `
         <div class="toast-header bg-success text-white">
             <i class="bi bi-hand-thumbs-up me-2"></i>
-            <strong class="me-auto">¡Bienvenido!</strong>
+            <strong class="me-auto">${saludo}</strong>
+            <small class="text-white-50">${horaFormateada}</small>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
         <div class="toast-body">
@@ -61,19 +80,7 @@ function animarTarjetas() {
     });
 }
 
-// Función para cambiar tema (modo oscuro/claro)
-function toggleTema() {
-    const body = document.body;
-    const isDark = body.classList.contains('dark-theme');
-    
-    if (isDark) {
-        body.classList.remove('dark-theme');
-        localStorage.setItem('theme', 'light');
-    } else {
-        body.classList.add('dark-theme');
-        localStorage.setItem('theme', 'dark');
-    }
-}
+
 
 // Función para mostrar/ocultar información adicional en perfiles
 function toggleInfo(elementId) {
@@ -207,11 +214,7 @@ function validarFormulario(formId) {
 
 // Event listeners que se ejecutan al cargar la página
 document.addEventListener('DOMContentLoaded', function() {
-    // Cargar tema guardado
-    const temaGuardado = localStorage.getItem('theme');
-    if (temaGuardado === 'dark') {
-        document.body.classList.add('dark-theme');
-    }
+
     
        // Inicializar efecto typeWriter
     const tituloElement = document.getElementById('typing-title');
@@ -230,10 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
         btnBienvenida.addEventListener('click', mostrarBienvenida);
     }
     
-    const btnTema = document.getElementById('btn-tema');
-    if (btnTema) {
-        btnTema.addEventListener('click', toggleTema);
-    }
+
     
     const btnColores = document.getElementById('btn-colores');
     if (btnColores) {
@@ -270,57 +270,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Estilos para tema oscuro
-const darkThemeStyles = `
-    .dark-theme {
-        background-color: #1a1a1a !important;
-        color: #ffffff !important;
-    }
-    
-    .dark-theme .card {
-        background-color: #2d2d2d !important;
-        color: #ffffff !important;
-    }
-    
-    .dark-theme .navbar {
-        background: linear-gradient(135deg, #1a1a1a, #2d2d2d) !important;
-    }
-    
-    .dark-theme footer {
-        background-color: #1a1a1a !important;
-    }
-    
-    .dark-theme .bg-light {
-        background-color: #2d2d2d !important;
-        color: #ffffff !important;
-    }
-    
-    .dark-theme .favorites-section {
-        background-color: #2d2d2d !important;
-    }
-    
-    .dark-theme .music-card {
-        background-color: #3d3d3d !important;
-        color: #ffffff !important;
-    }
-    
-    .dark-theme .carousel-3d-item .music-card {
-        background-color: rgba(45, 45, 45, 0.9) !important;
-        color: #ffffff !important;
-    }
-    
-    .dark-theme .section-title {
-        color: #ffffff !important;
-    }
-`;
 
-// Agregar estilos de tema oscuro al head
-if (!document.getElementById('dark-theme-styles')) {
-    const style = document.createElement('style');
-    style.id = 'dark-theme-styles';
-    style.textContent = darkThemeStyles;
-    document.head.appendChild(style);
-}
 
 function typeWriter(element, text, speed = 20) {
     let i = 0;
