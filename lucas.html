@@ -1,282 +1,337 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas - Perfil</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./img/lucas_icn.ico"
+      type="image/x-icon"
+    />
+    <title>Lucas - Guardián del muro</title>
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <!-- Navegación -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Cormorant+Garamond:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/lucas.css" />
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="img/logo.svg" alt="Logo" width="40" height="40" class="me-2">
-                Equipo Innovador
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">
-                            <i class="bi bi-house-fill me-1"></i>Inicio
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
-                            <i class="bi bi-people-fill me-1"></i>Integrantes
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item active" href="lucas.html">Lucas</a></li>
-                            <li><a class="dropdown-item" href="victoria.html">Victoria</a></li>
-                            <li><a class="dropdown-item" href="sebastian.html">Sebastián</a></li>
-                            <li><a class="dropdown-item" href="jose.html">Jose</a></li>
-                            <li><a class="dropdown-item" href="estiven.html">Estiven</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="bitacora.html">
-                            <i class="bi bi-journal-text me-1"></i>Bitácora
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <button class="btn btn-outline-light btn-sm ms-2" id="btn-tema" title="Cambiar tema">
-                            <i class="bi bi-moon-fill"></i>
-                        </button>
-                    </li>
-                </ul>
-            </div>
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img
+            src="img/logo.svg"
+            alt="Logo"
+            width="40"
+            height="40"
+            class="me-2"
+          />
+          Equipo Innovador
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="bi bi-house-fill me-1"></i>Inicio
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                <i class="bi bi-people-fill me-1"></i>Integrantes
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item active" href="lucas.html">Lucas</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="victoria.html">Victoria</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="sebastian.html">Sebastián</a>
+                </li>
+                <li><a class="dropdown-item" href="luis.html">Luis</a></li>
+                <li>
+                  <a class="dropdown-item" href="estiven.html">Estiven</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bitacora.html">
+                <i class="bi bi-journal-text me-1"></i>Bitácora
+              </a>
+            </li>
+            <li class="nav-item">
+              <button
+                class="btn btn-outline-light btn-sm ms-2"
+                id="btn-tema"
+                title="Cambiar tema"
+              >
+                <i class="bi bi-moon-fill"></i>
+              </button>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-    <!-- Perfil Principal -->
     <section class="py-5 mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card profile-card shadow-lg">
-                        <div class="card-body p-5">
-                            <div class="row align-items-center">
-                                <div class="col-lg-4 text-center mb-4 mb-lg-0">
-                                    <img src="img/avatar1.svg" alt="Ana García" class="profile-img mb-3">
-                                    <h2 class="fw-bold text-primary">Lucas</h2>
-                                    <p class="text-muted mb-3">
-                                        <i class="bi bi-geo-alt-fill me-1"></i>Madrid, España
-                                    </p>
-                                    <p class="text-muted mb-3">
-                                        <i class="bi bi-calendar-event me-1"></i>25 años
-                                    </p>
-                                    <button class="btn btn-primary" id="btn-colores" onclick="cambiarColoresHabilidades()">
-                                        <i class="bi bi-palette me-1"></i>Cambiar colores
-                                    </button>
-                                </div>
-                                
-                                <div class="col-lg-8">
-                                    <h3 class="text-primary mb-3">Sobre mí</h3>
-                                    <p class="lead mb-4">
-                                        Soy un desarrollador frontend apasionado por crear experiencias de usuario excepcionales. 
-                                        Me especializo en React y tengo un fuerte enfoque en el diseño UX/UI. 
-                                        Disfruto transformando ideas complejas en interfaces simples e intuitivas.
-                                    </p>
-                                    
-                                    <h4 class="text-primary mb-3">Habilidades</h4>
-                                    <div class="skills-list mb-4">
-                                        <span class="skill-tag">React</span>
-                                        <span class="skill-tag">JavaScript ES6+</span>
-                                        <span class="skill-tag">CSS3 & SASS</span>
-                                        <span class="skill-tag">Figma</span>
-                                        <span class="skill-tag">Adobe XD</span>
-                                        <span class="skill-tag">Bootstrap</span>
-                                        <span class="skill-tag">Git & GitHub</span>
-                                        <span class="skill-tag">Responsive Design</span>
-                                    </div>
-                                    
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <button class="btn btn-outline-primary mb-3" onclick="toggleInfo('info-adicional')">
-                                                <i class="bi bi-info-circle me-1"></i>Más información
-                                            </button>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <button class="btn btn-outline-success" onclick="mostrarAlerta('¡Gracias por visitar mi perfil! 😊', 'success')">
-                                                <i class="bi bi-heart me-1"></i>Saludar
-                                            </button>
-                                        </div>
-                                    </div>
-                                    
-                                    <div id="info-adicional" style="display: none;" class="mt-3 p-3 bg-light rounded">
-                                        <h5>Información adicional</h5>
-                                        <p><strong>Experiencia:</strong> 3 años en desarrollo frontend</p>
-                                        <p><strong>Educación:</strong> Grado en Ingeniería Informática</p>
-                                        <p><strong>Idiomas:</strong> Español (nativo), Inglés (avanzado), Francés (intermedio)</p>
-                                        <p><strong>Hobbies:</strong> Fotografía, senderismo, lectura de ciencia ficción</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección de Favoritos -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="card h-100 shadow">
-                        <div class="card-body">
-                            <h4 class="card-title text-primary mb-4">
-                                <i class="bi bi-film me-2"></i>Películas Favoritas
-                            </h4>
-                            <ul class="favorites-list">
-                                <li>
-                                    <strong>Blade Runner 2049</strong>
-                                    <p class="mb-0 text-muted">Una obra maestra de ciencia ficción que explora temas profundos sobre la humanidad.</p>
-                                </li>
-                                <li>
-                                    <strong>Her</strong>
-                                    <p class="mb-0 text-muted">Una reflexión hermosa sobre la tecnología y las relaciones humanas.</p>
-                                </li>
-                                <li>
-                                    <strong>The Social Network</strong>
-                                    <p class="mb-0 text-muted">La historia fascinante detrás de la creación de Facebook.</p>
-                                </li>
-                                <li>
-                                    <strong>Ex Machina</strong>
-                                    <p class="mb-0 text-muted">Un thriller psicológico sobre inteligencia artificial que te hace pensar.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-6 mb-4">
-                    <div class="card h-100 shadow">
-                        <div class="card-body">
-                            <h4 class="card-title text-primary mb-4">
-                                <i class="bi bi-music-note-beamed me-2"></i>Música Favorita
-                            </h4>
-                            <ul class="favorites-list">
-                                <li>
-                                    <strong>Radiohead - OK Computer</strong>
-                                    <p class="mb-0 text-muted">Un álbum que cambió mi perspectiva sobre la música electrónica.</p>
-                                </li>
-                                <li>
-                                    <strong>Daft Punk - Random Access Memories</strong>
-                                    <p class="mb-0 text-muted">Perfecto para programar, combina nostalgia y modernidad.</p>
-                                </li>
-                                <li>
-                                    <strong>Tame Impala - Currents</strong>
-                                    <p class="mb-0 text-muted">Música psicodélica que inspira creatividad.</p>
-                                </li>
-                                <li>
-                                    <strong>Boards of Canada - Music Has the Right to Children</strong>
-                                    <p class="mb-0 text-muted">Ambient electrónico ideal para concentrarse.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Navegación entre perfiles -->
-    <section class="py-4 bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <a href="index.html" class="btn btn-outline-primary">
-                            <i class="bi bi-arrow-left me-1"></i>Volver al inicio
-                        </a>
-                        
-                        <div class="text-center">
-                            <small class="text-muted">Otros integrantes:</small>
-                            <div class="mt-2">
-                                <a href="carlos-rodriguez.html" class="btn btn-sm btn-outline-secondary me-2">Carlos</a>
-                                <a href="maria-lopez.html" class="btn btn-sm btn-outline-secondary">María</a>
-                            </div>
-                        </div>
-                        
-                        <a href="carlos-rodriguez.html" class="btn btn-outline-primary">
-                            Siguiente perfil<i class="bi bi-arrow-right ms-1"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>Ana García</h5>
-                    <p class="mb-0">Desarrolladora Frontend | UX/UI Designer</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <p class="mb-0">
-                        <i class="bi bi-envelope me-1"></i>
-                        ana.garcia@equipoinnovador.com
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="card profile-card shadow-lg">
+              <div class="card-body p-5">
+                <div class="row align-items-center">
+                  <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                    <img
+                      src="img/lucas_perfil.png"
+                      alt="Lucas de la Guardia de la Noche"
+                      class="profile-img mb-3"
+                    />
+                    <h2 class="fw-bold text-primary">Lucas</h2>
+                    <strong class="text-muted mb-3" id="slogan-display"
+                      >"El invierno se acerca..."</strong
+                    >
+                    <p class="text-muted mb-3">
+                      <i class="bi bi-geo-alt-fill me-1"></i>Villa Devoto, CABA
                     </p>
-                    <div class="mt-2">
-                        <button class="btn btn-outline-light btn-sm" onclick="scrollSuave('top')">
-                            <i class="bi bi-arrow-up"></i> Volver arriba
-                        </button>
+                    <p class="text-muted mb-3">
+                      <i class="bi bi-calendar-event me-1"></i>31 años
+                    </p>
+                    <button class="btn btn-primary" id="toggle-slogan-btn">
+                      <i class="bi bi-shuffle me-1"></i>Cambiar Lema
+                    </button>
+                  </div>
+
+                  <div class="col-lg-8">
+                    <h3 class="text-primary mb-3">Sobre mí</h3>
+                    <p class="lead mb-4">
+                      Soy Lucas, me encanta la tecnología, el desarrollo de
+                      software, los juegos, pasar tiempo en familia y el
+                      fútbol.<br />
+                      <br />
+                      Hace ya 3 años que en paralelo con mi trabajo a tiempo
+                      completo (fuera de sistemas) aprendo sobre desarrollo de
+                      software tanto de manera formal como también autodidacta.
+                    </p>
+
+                    <h4 class="text-primary mb-3">Habilidades</h4>
+                    <div class="skills-list mb-4">
+                      <span class="skill-tag">HTML</span>
+                      <span class="skill-tag">CSS</span>
+                      <span class="skill-tag">POO</span>
+                      <span class="skill-tag">JavaScript</span>
+                      <span class="skill-tag">SQL</span>
+                      <span class="skill-tag">C#</span>
+                      <span class="skill-tag">Git</span>
+                      <span class="skill-tag">Kotlin</span>
+                      <span class="skill-tag"
+                        >Modelado y diseño de Software</span
+                      >
+                      <span class="skill-tag"
+                        >Forjador de Telarañas Digitales</span
+                      >
+                      <span class="skill-tag">Maestro de Código</span>
                     </div>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <button
+                          class="btn btn-outline-primary mb-3"
+                          id="toggle-info-btn"
+                        >
+                          <i class="bi bi-info-circle me-1"></i>Más información
+                        </button>
+                      </div>
+                      <div class="col-md-6">
+                        <button
+                          class="btn btn-outline-success"
+                          id="show-alert-btn"
+                        >
+                          <i class="bi bi-heart me-1"></i>Saludar
+                        </button>
+                      </div>
+                    </div>
+
+                    <div
+                      id="info-adicional"
+                      style="display: none"
+                      class="mt-3 p-3 rounded dark-bg"
+                    >
+                      <h5>Información adicional</h5>
+                      <p>
+                        <strong>Experiencia:</strong> Más de una década en el
+                        reino de la tecnología, los videos juegos y el software.
+                      </p>
+                      <p>
+                        <strong>Hobbies:</strong> Disfrutar con familia y
+                        amigos, jugar al fútbol y jugar juegos.
+                      </p>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <div class="card h-100 shadow">
+              <div class="card-body">
+                <h4 class="card-title mb-4">
+                  <i class="bi bi-film me-2"></i>Películas/Series Favoritas
+                </h4>
+                <a
+                  href="https://www.youtube.com/watch?v=SJZfCg51xlU&list=RDSJZfCg51xlU&start_radio=1"
+                  target="_blank"
+                  class="d-block text-center mb-3"
+                >
+                  <img
+                    src="./img/pelis_foto.png"
+                    alt="Póster de Game of Thrones"
+                    class="favorite-image img-fluid"
+                  />
+                </a>
+                <ul class="favorites-list">
+                  <li class="text-primary">
+                    <strong class="text-primary">Game Of Thrones</strong>
+                    <p class="mb-0 text-muted">
+                      Batallas épicas por el trono de hierro y el dominio de los
+                      7 reinos.
+                    </p>
+                  </li>
+                  <li>
+                    <strong class="text-primary">Breaking Bad</strong>
+                    <p class="mb-0 text-muted">
+                      Un profesor de química...y algo más.
+                    </p>
+                  </li>
+                  <li>
+                    <strong class="text-primary">Rápidos y furiosos</strong>
+                    <p class="mb-0 text-muted">
+                      Una pelicula de autos... pero muy pochoclera jaja.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-4">
+            <div class="card h-100 shadow">
+              <div class="card-body">
+                <h4 class="card-title text-primary mb-4">
+                  <i class="bi bi-music-note-beamed me-2"></i>Música Favorita
+                </h4>
+                <a
+                  href="https://www.youtube.com/watch?v=ZCLhaPWwVwM&list=RDZCLhaPWwVwM&start_radio=1"
+                  target="_blank"
+                  class="d-block text-center mb-3"
+                >
+                  <img
+                    src="./img/ed_foto.png"
+                    alt="Foto de Ed Sheeran"
+                    class="favorite-image img-fluid"
+                  />
+                </a>
+                <ul class="favorites-list">
+                  <li>
+                    <strong class="text-primary">Ed Sheeran</strong>
+                    <p class="mb-0 text-muted">
+                      Baladas románticas muy melosas.
+                    </p>
+                  </li>
+                  <li>
+                    <strong class="text-primary">El Kuelgue</strong>
+                    <p class="mb-0 text-muted">Una banda un poco loca.</p>
+                  </li>
+                  <li>
+                    <strong class="text-primary">Coldplay</strong>
+                    <p class="mb-0 text-muted">
+                      Mas baladas románticas melosas y para estar de chill.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-4 bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="index.html" class="btn btn-outline-light">
+                <i class="bi bi-arrow-left me-1"></i>Volver al Bastión
+              </a>
+
+              <a href="victoria.html" class="btn btn-outline-light">
+                Siguiente Hermano<i class="bi bi-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Lucas de la Casa Stark</h5>
+            <p class="mb-0">Forjador de Código | Guardia de la Noche</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="mb-0">
+              <i class="bi bi-envelope me-1"></i>
+              lucas.stark@equipoinnovador.com
+            </p>
+            <div class="mt-2">
+              <button
+                class="btn btn-outline-light btn-sm"
+                onclick="scrollSuave('top')"
+              >
+                <i class="bi bi-arrow-up"></i> Volver al Trono
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- JavaScript personalizado -->
     <script src="js/main.js"></script>
-    
-    <!-- Script específico para el perfil -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animación de entrada para la imagen de perfil
-            const profileImg = document.querySelector('.profile-img');
-            if (profileImg) {
-                profileImg.style.transform = 'scale(0)';
-                setTimeout(() => {
-                    profileImg.style.transition = 'transform 0.5s ease';
-                    profileImg.style.transform = 'scale(1)';
-                }, 300);
-            }
-            
-            // Efecto hover en las listas de favoritos
-            const favoriteItems = document.querySelectorAll('.favorites-list li');
-            favoriteItems.forEach(item => {
-                item.addEventListener('mouseenter', function() {
-                    this.style.backgroundColor = '#f8f9fa';
-                    this.style.borderLeft = '4px solid #3498db';
-                });
-                
-                item.addEventListener('mouseleave', function() {
-                    this.style.backgroundColor = '#ffffff';
-                    this.style.borderLeft = 'none';
-                });
-            });
-        });
-    </script>
-</body>
+    <script src="js/lucas.js"></script>
+  </body>
 </html>

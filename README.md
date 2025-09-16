@@ -93,9 +93,9 @@ La organización del proyecto sigue las mejores prácticas de desarrollo web:
 ### Páginas Individuales
 
 #### Lucas (lucas.html)
-- **Perfil Completo**: Frontend Developer especializado en React y Vue.js
-- **Ubicación**: Madrid, España (26 años)
-- **Habilidades**: React, Vue.js, Angular, TypeScript, Node.js, MongoDB, PostgreSQL
+- **Perfil Completo**: Técnico en electrónica, empleado administrativo, gestión y ventas a tiempo completo, apasionado por la técnologia y el desarrollo.
+- **Ubicación**: Villa Devoto, CABA (31 años)
+- **Habilidades**: HTML, CSS, JavaScript, POO, SQL, C#, GIT, Kotlin, Modelado y diseño de software.
 - **Secciones**: Información personal, habilidades técnicas, experiencia, películas favoritas y música
 
 #### Victoria (victoria.html)
