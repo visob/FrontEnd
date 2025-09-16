@@ -11,8 +11,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Estilos específicos de Sebastian -->
+    <link rel="stylesheet" href="css/sebastian.css">
 </head>
 <body>
     <!-- Navegación -->
@@ -58,7 +62,7 @@
     </nav>
 
     <!-- Perfil Principal -->
-    <section class="py-5 mt-5">
+    <section class="py-5 mt-5 ">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -66,13 +70,13 @@
                         <div class="card-body p-5">
                             <div class="row align-items-center">
                                 <div class="col-lg-4 text-center mb-4 mb-lg-0">
-                                    <img src="img/avatar3.svg" alt="Sebastián" class="profile-img mb-3" id="profile-image">
+                                    <img src="img/sebastian-perfil.webp" alt="Sebastián" class="profile-img mb-3" id="profile-image">
                                     <h2 class="fw-bold text-primary">Sebastián</h2>
                                     <p class="text-muted mb-3">
-                                        <i class="bi bi-geo-alt-fill me-1"></i>Valencia, España
+                                        <i class="bi bi-geo-alt-fill me-1"></i>Mendoza, Argentina
                                     </p>
                                     <p class="text-muted mb-3">
-                                        <i class="bi bi-calendar-event me-1"></i>26 años
+                                        <i class="bi bi-calendar-event me-1"></i>42 años
                                     </p>
                                     <button class="btn btn-info" id="btn-rotar" onclick="rotarImagen()">
                                         <i class="bi bi-arrow-clockwise me-1"></i>Rotar imagen
@@ -82,45 +86,39 @@
                                 <div class="col-lg-8">
                                     <h3 class="text-primary mb-3">Sobre mí</h3>
                                     <p class="lead mb-4">
-                                        Soy un desarrollador Full Stack con una gran pasión por la innovación y las nuevas tecnologías. 
-                                        Me especializo en la integración de sistemas y disfruto trabajando tanto en el frontend como en el backend. 
-                                        Siempre estoy buscando maneras de optimizar procesos y crear soluciones eficientes.
+                                        Soy administrador de redes especializado en infraestructura de TI y seguridad de redes. Mi pasión es diseñar, 
+                                        implementar y mantener redes eficientes y seguras que satisfagan las necesidades de las 
+                                        organizaciones. Disfruto resolviendo problemas complejos y optimizando el rendimiento de las redes 
+                                        para garantizar la máxima disponibilidad y seguridad de los datos.
                                     </p>
                                     
                                     <h4 class="text-primary mb-3">Habilidades</h4>
                                     <div class="skills-list mb-4" id="skills-container">
-                                        <span class="skill-tag">Vue.js</span>
-                                        <span class="skill-tag">React</span>
+                                        <span class="skill-tag">Mikrotik</span>
+                                        <span class="skill-tag">Routing & Switching</span>
+                                        <span class="skill-tag">VPN</span>
+                                        <span class="skill-tag">Protocolos de Red</span>
+                                        <span class="skill-tag">Seguridad de Red</span>
+                                        <span class="skill-tag">Monitorización</span>
+                                        <span class="skill-tag">Linux/Windows Server</span>
                                         <span class="skill-tag">PHP</span>
-                                        <span class="skill-tag">Laravel</span>
+                                        <span class="skill-tag">Python</span>
                                         <span class="skill-tag">MySQL</span>
-                                        <span class="skill-tag">Docker</span>
-                                        <span class="skill-tag">Git</span>
-                                        <span class="skill-tag">AWS</span>
+                                    </div>
+                                    <h4 class="text-primary mb-3">Experiencia</h4>
+                                    <div class="mb-4">
+                                        <h5 class="fw-bold"> Infraestructura y Soporte </h5>
+                                        <p class="text-muted mb-2">Estudio juridico • 2021 - Presente</p>
+                                        <p>Lideré el proyecto de implementación de la infraestructura de red y TI para un estudio jurídico. Mis responsabilidades incluyeron el cableado estructurado de todas las estaciones de trabajo, la instalación y configuración del software legal LEX en un servidor local, y el despliegue de una solución de acceso remoto seguro para permitir a los abogados trabajar desde cualquier ubicación. El resultado fue una mejora significativa en la eficiencia operativa y la colaboración del equipo.</p>
                                     </div>
                                     
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <button class="btn btn-outline-primary mb-3" onclick="toggleInfo('certificaciones')">
-                                                <i class="bi bi-award me-1"></i>Certificaciones
-                                            </button>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <button class="btn btn-outline-danger" onclick="animarHabilidades()">
-                                                <i class="bi bi-stars me-1"></i>Animar todo
-                                            </button>
-                                        </div>
+                                    <div class="mb-4">
+                                        <h5 class="fw-bold">Desarrollador web freelance</h5>
+                                        <p class="text-muted mb-2">Estudio Contable • 2023 </p>
+                                        <p>Diseñé y desarrollé una página web corporativa a medida para un estudio contable . El sitio destaca por su diseño profesional y claro, integra un formulario de contacto seguro y una sección blog para estrategias de marketing de contenidos, mejorando significativamente su presencia online y la captación de leads.</p>
                                     </div>
                                     
-                                    <div id="certificaciones" style="display: none;" class="mt-3 p-3 bg-light rounded">
-                                        <h5>Certificaciones y Logros</h5>
-                                        <ul>
-                                            <li><strong>AWS Certified Developer:</strong> Certificación en servicios de Amazon Web Services</li>
-                                            <li><strong>Vue.js Expert:</strong> Certificación avanzada en Vue.js y Nuxt.js</li>
-                                            <li><strong>Scrum Master:</strong> Metodologías ágiles y gestión de proyectos</li>
-                                            <li><strong>Google Analytics:</strong> Análisis web y métricas digitales</li>
-                                        </ul>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -130,164 +128,205 @@
         </div>
     </section>
 
-    <!-- Sección de Favoritos -->
-    <section class="py-5">
+    <!-- Sección de Películas Favoritas -->
+    <section class="py-5 m-5 rounded-3 fondo">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="card h-100 shadow">
-                        <div class="card-body">
-                            <h4 class="card-title text-primary mb-4">
-                                <i class="bi bi-film me-2"></i>Películas Favoritas
-                            </h4>
-                            <ul class="favorites-list" id="movies-list">
-                                <li>
-                                    <strong>The Pursuit of Happyness</strong>
-                                    <p class="mb-0 text-muted">Una historia inspiradora sobre perseverancia y determinación.</p>
-                                </li>
-                                <li>
-                                    <strong>Hidden Figures</strong>
-                                    <p class="mb-0 text-muted">Mujeres pioneras en la tecnología y las matemáticas.</p>
-                                </li>
-                                <li>
-                                    <strong>The Imitation Game</strong>
-                                    <p class="mb-0 text-muted">La fascinante historia de Alan Turing y la computación.</p>
-                                </li>
-                                <li>
-                                    <strong>Steve Jobs</strong>
-                                    <p class="mb-0 text-muted">La biografía del visionario de Apple y la innovación tecnológica.</p>
-                                </li>
-                            </ul>
-                            <button class="btn btn-sm btn-outline-primary mt-3" onclick="mezclarLista('movies-list')">
-                                <i class="bi bi-shuffle me-1"></i>Mezclar lista
-                            </button>
-                        </div>
+            <h3 class="section-title text-primary">
+                <i class="bi bi-film me-2"></i>Series y Películas Favoritas
+            </h3>
+            
+            <div class="container">
+                <div class="row">
+            <!-- Película 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="movie-card">
+                    <img src="img/sebastian-terminator2.jpg" alt="Terminator 2" class="card-image">
+                    <div class="card-overlay">
+                        <h3 class="card-title">Terminator 2</h3>
+                        <p class="card-info">James Cameron • 1991 • Ciencia Ficción</p>
+                        <p class="card-description">Un cyborg mejorado es enviado desde el futuro para proteger al joven John Connor de un Terminator más avanzado y mortífero.</p>
+                        <p class="card-price">9.5/10 ⭐</p>
+                        <a href="https://www.youtube.com/watch?v=CRRlbK5w8AE" target="_blank" class="btn btn-action">
+                            <i class="fas fa-play-circle"></i> Ver trailer
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3>Terminator 2: El Juicio Final</h3>
+                        <p>Clásico de la ciencia ficción con Arnold Schwarzenegger</p>
                     </div>
                 </div>
-                
-                <div class="col-lg-6 mb-4">
-                    <div class="card h-100 shadow">
-                        <div class="card-body">
-                            <h4 class="card-title text-primary mb-4">
-                                <i class="bi bi-music-note-beamed me-2"></i>Música Favorita
-                            </h4>
-                            <ul class="favorites-list" id="music-list">
-                                <li>
-                                    <strong>Billie Eilish - When We All Fall Asleep</strong>
-                                    <p class="mb-0 text-muted">Música moderna que me inspira creatividad.</p>
-                                </li>
-                                <li>
-                                    <strong>Coldplay - A Head Full of Dreams</strong>
-                                    <p class="mb-0 text-muted">Melodías que me motivan durante el trabajo.</p>
-                                </li>
-                                <li>
-                                    <strong>Imagine Dragons - Evolve</strong>
-                                    <p class="mb-0 text-muted">Energía perfecta para sesiones de coding intensas.</p>
-                                </li>
-                                <li>
-                                    <strong>Lana Del Rey - Born to Die</strong>
-                                    <p class="mb-0 text-muted">Música atmosférica ideal para concentrarse.</p>
-                                </li>
-                            </ul>
-                            <button class="btn btn-sm btn-outline-primary mt-3" onclick="mezclarLista('music-list')">
-                                <i class="bi bi-shuffle me-1"></i>Mezclar lista
-                            </button>
-                        </div>
+            </div>
+            
+            <!-- Película 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="movie-card">
+                    <img src="img/sebastian-thebigshort1.jpg" alt="The Big Short" class="card-image">
+                    <div class="card-overlay">
+                        <h3 class="card-title">The Big Short</h3>
+                        <p class="card-info">Adam McKay • 2015 • Drama</p>
+                        <p class="card-description">En 2008, un grupo de inversionistas se da cuenta de la burbuja inmobiliaria y decide aprovecharse de la inminente crisis económica.</p>
+                        <p class="card-price">7.8/10 ⭐</p>
+                        <a href="https://www.youtube.com/watch?v=vgqG3ITMv1Q" target="_blank" class="btn btn-action">
+                            <i class="fas fa-play-circle"></i> Ver trailer
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3>The Big Short</h3>
+                        <p>La historia de la burbuja inmobiliaria de 2008</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Película 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="movie-card">
+                    <img src="img/sebastian-ajeoosi2.jpg" alt="El Hombre Sin Pasado" class="card-image">
+                    <div class="card-overlay">
+                        <h3 class="card-title">El Hombre Sin Pasado</h3>
+                        <p class="card-info">Lee Jeong-beom • 2010 • Accion</p>
+                        <p class="card-description">El encargado de una casa de empeños con un pasado oscuro se enfrenta a una red de tráfico de drogas y de órganos, con la esperanza de salvar a su única amiga: una niña.</p>
+                        <p class="card-price">7.8/10 ⭐</p>
+                        <a href="https://www.youtube.com/watch?v=38rPoGSr19U" target="_blank" class="btn btn-action">
+                            <i class="fas fa-play-circle"></i> Ver trailer
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Película 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="movie-card">
+                    <img src="img/sebastian-Como_Hackear_seu_Chefe3.jpg" alt="Cómo Hackear a tu Jefe" class="card-image">
+                    <div class="card-overlay">
+                        <h3 class="card-title">Cómo Hackear a tu Jefe</h3>
+                        <p class="card-info">Comedia • 2020 • Tecnología</p>
+                        <p class="card-description">Tres empleados de TI decen tomar el control digital de la empresa cuando descubren que su jefe planea despedirlos para outsourcing.</p>
+                        <p class="card-price">6.5/10 ⭐</p>
+                        <a href="https://www.youtube.com/watch?v=wWxPqJpBSps" target="_blank" class="btn btn-action">
+                            <i class="fas fa-play-circle"></i> Ver trailer
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3>Cómo Hackear a tu Jefe</h3>
+                        <p>Comedia sobre informáticos rebeldes</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sección de Progreso de Habilidades -->
-    <section class="py-5 bg-light">
+    <!-- Sección de Música Favorita -->
+    <section class="py-5 m-5 rounded-3 fondo ">
         <div class="container">
+            <h3 class="section-title music text-primary">
+                <i class="bi bi-music-note-beamed me-2"></i>Música Favorita
+            </h3>
             <div class="row">
-                <div class="col-12 text-center mb-4">
-                    <h3 class="text-primary">Nivel de Habilidades</h3>
-                    <p class="text-muted">Haz clic en "Mostrar progreso" para ver las barras animadas</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="card border-0 bg-transparent">
-                        <div class="card-body">
-                            <h5>Frontend</h5>
-                            <div class="mb-3">
-                                <div class="d-flex justify-content-between">
-                                    <span>Vue.js</span>
-                                    <span>90%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-success" role="progressbar" style="width: 0%" data-width="90"></div>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="d-flex justify-content-between">
-                                    <span>React</span>
-                                    <span>75%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-info" role="progressbar" style="width: 0%" data-width="75"></div>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Canción 1 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="music-card">
+                    <img src="img/sebastian-scorpion1.jpg" alt="Scorpions" class="card-image">
+                    <div class="card-overlay">
+                        <h3 class="card-title">Still Loving You</h3>
+                        <p class="card-info">Scorpions • 1984 • Rock</p>
+                        <p class="card-description">Uno de los mayores éxitos de la banda alemana Scorpions, una power ballad que se ha convertido en un himno del rock romántico.</p>
+                        <p class="card-price">Duración: 6:28</p>
+                        <a href="https://youtu.be/CjRas1yOWvo?list=RDCjRas1yOWvo" target="_blank" class="btn btn-action">
+                            <i class="fas fa-play"></i> Escuchar
+                        </a>
                     </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="card border-0 bg-transparent">
-                        <div class="card-body">
-                            <h5>Backend</h5>
-                            <div class="mb-3">
-                                <div class="d-flex justify-content-between">
-                                    <span>PHP/Laravel</span>
-                                    <span>85%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 0%" data-width="85"></div>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="d-flex justify-content-between">
-                                    <span>MySQL</span>
-                                    <span>80%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 0%" data-width="80"></div>
-                                </div>
-                            </div>
+                    <div class="card-content text-center">
+                        <div class="music-icon">
+                            <i class="fas fa-music"></i>
                         </div>
+                        <h3>Still Loving You</h3>
+                        <p>Scorpions</p>
                     </div>
                 </div>
             </div>
-            <div class="text-center">
-                <button class="btn btn-primary" onclick="mostrarProgreso()">
-                    <i class="bi bi-bar-chart me-1"></i>Mostrar progreso
-                </button>
+            
+            <!-- Canción 2 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="music-card">
+                    <img src="img/sebastian-dontcry.jpg" alt="Guns" class="card-image">
+                    <div class="card-overlay">
+                        <h3 class="card-title">Don't Cry</h3>
+                        <p class="card-info">Guns N' Roses • 1991 • Rock</p>
+                        <p class="card-description">Una de las baladas más famosas de Guns N' Roses, incluida en el álbum Use Your Illusion I. Conocida por su emotiva letra y solo de guitarra.</p>
+                        <p class="card-price">Duración: 4:45</p>
+                        <a href="https://www.youtube.com/watch?v=zRIbf6JqkNc" target="_blank" class="btn btn-action">
+                            <i class="fas fa-play"></i> Escuchar
+                        </a>
+                    </div>
+                    <div class="card-content text-center">
+                        <div class="music-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3>Don't Cry</h3>
+                        <p>Guns N' Roses</p>
+                    </div>
+                </div>
             </div>
-        </div>
+            
+            <!-- Canción 3 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="music-card">
+                    <img src="img/sebastian-creep.jpg" alt="Radioheart" class="card-image">
+                    <div class="card-overlay">
+                        <h3 class="card-title">Creep</h3>
+                        <p class="card-info">Radiohead • 1992 • Rock Alternativo</p>
+                        <p class="card-description">El éxito breakthrough de Radiohead que los llevó a la fama internacional. Una canción sobre inseguridades y sentirse fuera de lugar.</p>
+                        <p class="card-price">Duración: 3:58</p>
+                        <a href="https://www.youtube.com/watch?v=XFkzRNyygfk" target="_blank" class="btn btn-action">
+                            <i class="fas fa-play"></i> Escuchar
+                        </a>
+                    </div>
+                    <div class="card-content text-center">
+                        <div class="music-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3>Creep</h3>
+                        <p>Radiohead</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Canción 4 -->
+            <div class="col-md-6 col-lg-3">
+                <div class="music-card">
+                    <img src="img/sebas-numb.jpg" alt="Linkin" class="card-image">
+                    <div class="card-overlay">
+                        <h3 class="card-title">Numb</h3>
+                        <p class="card-info">Linkin Park • 2003 • Rock</p>
+                        <p class="card-description">Uno de los mayores éxitos de Linkin Park, que explora temas de presión y desconexión emocional. Parte del álbum Meteora.</p>
+                        <p class="card-price">Duración: 3:07</p>
+                        <a href="https://www.youtube.com/watch?v=kXYiU_JCYtU" target="_blank" class="btn btn-action">
+                            <i class="fas fa-play"></i> Escuchar
+                        </a>
+                    </div>
+                    <div class="card-content text-center">
+                        <div class="music-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3>Numb</h3>
+                        <p>Linkin Park</p>
+                    </div>
+                </div>
+            
     </section>
 
     <!-- Navegación entre perfiles -->
-    <section class="py-4 bg-success text-white">
+    <section class="py-2 bg-dark mt-5" >
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="d-flex justify-content-between align-items-center">
-                        <a href="carlos-rodriguez.html" class="btn btn-outline-light">
-                            <i class="bi bi-arrow-left me-1"></i>Perfil anterior
+                        <a href="victoria.html" class="btn btn-outline-light">
+                            <i class="bi bi-arrow-left me-1"></i>Victoria
                         </a>
                         
-                        <div class="text-center">
-                            <small>Otros integrantes:</small>
-                            <div class="mt-2">
-                                <a href="ana-garcia.html" class="btn btn-sm btn-outline-light me-2">Ana</a>
-                                <a href="carlos-rodriguez.html" class="btn btn-sm btn-outline-light">Carlos</a>
-                            </div>
-                        </div>
-                        
-                        <a href="index.html" class="btn btn-outline-light">
-                            Volver al inicio<i class="bi bi-house ms-1"></i>
+                        <a href="jose.html" class="btn btn-outline-light">
+                            Jose<i class="bi bi-arrow-right ms-1"></i>
                         </a>
                     </div>
                 </div>
@@ -296,23 +335,15 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="bg-dark text-light py-2 mt-0">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h5>María López</h5>
-                    <p class="mb-0">Desarrolladora Full Stack | Especialista en Integración</p>
+                    <h5>Equipo Innovador</h5>
+                    <p class="mb-0">Desarrollando el futuro, un proyecto a la vez.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <p class="mb-0">
-                        <i class="bi bi-envelope me-1"></i>
-                        maria.lopez@equipoinnovador.com
-                    </p>
-                    <div class="mt-2">
-                        <button class="btn btn-outline-light btn-sm" onclick="scrollSuave('top')">
-                            <i class="bi bi-arrow-up"></i> Volver arriba
-                        </button>
-                    </div>
+                    <p class="mb-0">&copy; 2024 Equipo Innovador. Todos los derechos reservados.</p>
                 </div>
             </div>
         </div>
@@ -323,108 +354,10 @@
     <!-- JavaScript personalizado -->
     <script src="js/main.js"></script>
     
-    <!-- Script específico para el perfil de María -->
-    <script>
-        let rotacion = 0;
-        
-        function rotarImagen() {
-            const img = document.getElementById('profile-image');
-            rotacion += 90;
-            img.style.transform = `rotate(${rotacion}deg)`;
-            img.style.transition = 'transform 0.5s ease';
-            
-            if (rotacion >= 360) {
-                setTimeout(() => {
-                    rotacion = 0;
-                    img.style.transition = 'none';
-                    img.style.transform = 'rotate(0deg)';
-                }, 500);
-            }
-        }
-        
-        function animarHabilidades() {
-            const skills = document.querySelectorAll('.skill-tag');
-            const colores = ['#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6', '#1abc9c'];
-            
-            skills.forEach((skill, index) => {
-                setTimeout(() => {
-                    const colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
-                    skill.style.backgroundColor = colorAleatorio;
-                    skill.style.transform = 'scale(1.2) rotate(5deg)';
-                    skill.style.transition = 'all 0.3s ease';
-                    
-                    setTimeout(() => {
-                        skill.style.transform = 'scale(1) rotate(0deg)';
-                    }, 300);
-                }, index * 100);
-            });
-            
-            mostrarAlerta('¡Habilidades animadas! 🎨', 'success');
-        }
-        
-        function mezclarLista(listId) {
-            const lista = document.getElementById(listId);
-            const items = Array.from(lista.children);
-            
-            // Mezclar array
-            for (let i = items.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [items[i], items[j]] = [items[j], items[i]];
-            }
-            
-            // Limpiar lista y agregar items mezclados
-            lista.innerHTML = '';
-            items.forEach((item, index) => {
-                setTimeout(() => {
-                    item.style.opacity = '0';
-                    item.style.transform = 'translateX(-20px)';
-                    lista.appendChild(item);
-                    
-                    setTimeout(() => {
-                        item.style.transition = 'all 0.3s ease';
-                        item.style.opacity = '1';
-                        item.style.transform = 'translateX(0)';
-                    }, 50);
-                }, index * 100);
-            });
-        }
-        
-        function mostrarProgreso() {
-            const barras = document.querySelectorAll('.progress-bar');
-            
-            barras.forEach((barra, index) => {
-                setTimeout(() => {
-                    const ancho = barra.getAttribute('data-width');
-                    barra.style.transition = 'width 1s ease';
-                    barra.style.width = ancho + '%';
-                }, index * 200);
-            });
-            
-            mostrarAlerta('Progreso de habilidades mostrado! 📊', 'info');
-        }
-        
-        document.addEventListener('DOMContentLoaded', function() {
-            // Efecto de pulso en la imagen de perfil
-            const profileImg = document.getElementById('profile-image');
-            setInterval(() => {
-                profileImg.style.transform = 'scale(1.05)';
-                setTimeout(() => {
-                    profileImg.style.transform = 'scale(1)';
-                }, 200);
-            }, 3000);
-            
-            // Animación inicial de las habilidades
-            const skills = document.querySelectorAll('.skill-tag');
-            skills.forEach((skill, index) => {
-                skill.style.opacity = '0';
-                skill.style.transform = 'translateY(20px)';
-                setTimeout(() => {
-                    skill.style.transition = 'all 0.5s ease';
-                    skill.style.opacity = '1';
-                    skill.style.transform = 'translateY(0)';
-                }, index * 150);
-            });
-        });
-    </script>
+    <!-- Script específico para el perfil de Sebastian -->
+   <script src="js/sebastian.js"></script>
+
+     <!-- jQuery and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
 </body>
 </html>
