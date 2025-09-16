@@ -40,8 +40,15 @@ Presentacion/
 ├── bitacora.html          # Documentación del proceso de desarrollo
 ├── README.md              # Documentación del proyecto
 ├── css/
-│   └── styles.css         # Estilos personalizados del sitio
+    ├── styles.css          # Estilos personalizados del sitio
+    ├── victoria.svg        # Estilos personalizados de pagina personal Victoria
+    ├── lucas.svg           # Estilos personalizados de pagina personal Lucas
+    ├── estiven.svg         # Estilos personalizados de pagina personal Estiven
+│   └── jose.css         # Estilos personalizados del sitio
 ├── js/
+    ├── estiven.js        # JavaScript de Estiven con las funcionalidades de su pagina personal
+    ├── lucas.js          # JavaScript de Lucas con las funcionalidades de su pagina personal
+    ├── wolverine.js      # JavaScript de Jose con las funcionalidades de su pagina personal
 │   └── main.js           # JavaScript principal con todas las funcionalidades
 └── img/
     ├── logo.svg          # Logo del equipo
@@ -100,14 +107,13 @@ La organización del proyecto sigue las mejores prácticas de desarrollo web:
 
 #### Victoria (victoria.html)
 - **Perfil Completo**: UX/UI Designer con experiencia en diseño centrado en el usuario
-- **Ubicación**: Barcelona, España (29 años)
-- **Habilidades**: Figma, Adobe XD, Sketch, Photoshop, Illustrator, HTML, CSS
-- **Secciones**: Información personal, habilidades técnicas, experiencia, películas favoritas y música
-- **Características**: Incluye todas las secciones de entretenimiento como referencia
+- **Ubicación**: Buenos Aires, Argentina (23 años)
+- **Habilidades**: Figma, Adobe Suite, Prototipado, HTML, CSS, JavaScript, Kotlin
+- **Secciones**: Información personal, habilidades técnicas, proyectos destacados, películas favoritas y música
 
 #### Sebastián (sebastian.html)
 - **Perfil Completo**: Backend Developer especializado en Python y APIs
-- **Ubicación**: Valencia, España (27 años)
+- **Ubicación**: Mendoza, Argentina (40 años)
 - **Habilidades**: Python, Django, Flask, FastAPI, PostgreSQL, Docker, AWS
 - **Secciones**: Información personal, habilidades técnicas, experiencia, películas favoritas y música
 
@@ -116,14 +122,12 @@ La organización del proyecto sigue las mejores prácticas de desarrollo web:
 - **Ubicación**: Sevilla, España (28 años)
 - **Habilidades**: React Native, Flutter, JavaScript, TypeScript, Firebase, MongoDB, AWS
 - **Secciones**: Información personal, habilidades técnicas, experiencia, películas favoritas y música
-- **Entretenimiento**: Películas de tecnología y música para desarrollo
 
 #### Estiven (estiven.html)
 - **Perfil Completo**: AI/ML Engineer especializado en inteligencia artificial
-- **Ubicación**: Bilbao, España (25 años)
-- **Habilidades**: Python, TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, Docker
+- **Ubicación**: Buenos Aires, Argentina (31 años)
+- **Habilidades**: NodeJS, MySQL, Express, NestJS, NextJS, Python, C#, .NET
 - **Secciones**: Información personal, habilidades técnicas, experiencia, películas favoritas y música
-- **Entretenimiento**: Películas de ciencia ficción y música experimental
 
 ### Bitácora (bitacora.html)
 - **Resumen Ejecutivo**: Generación dinámica de resumen del proyecto
@@ -240,33 +244,6 @@ Cada página individual de los integrantes del equipo incluye funcionalidades in
 - **Entretenimiento**: Secciones de películas favoritas y música con descripciones detalladas
 - **Efectos Visuales**: Animaciones CSS y transiciones suaves en toda la interfaz
 
-#### Lucas (`lucas.html`)
-- **Especialización Frontend**: Perfil enfocado en tecnologías de desarrollo frontend modernas
-- **Ubicación**: Madrid, España - Desarrollador de 26 años
-- **Stack Tecnológico**: React, Vue.js, Angular, TypeScript, Node.js
-
-#### Victoria (`victoria.html`)
-- **Especialización UX/UI**: Perfil centrado en diseño de experiencia de usuario
-- **Ubicación**: Barcelona, España - Diseñadora de 29 años
-- **Herramientas de Diseño**: Figma, Adobe XD, Sketch, Creative Suite
-
-#### Sebastián (`sebastian.html`)
-- **Especialización Backend**: Perfil enfocado en desarrollo de APIs y servicios
-- **Ubicación**: Valencia, España - Desarrollador de 27 años
-- **Tecnologías Backend**: Python, Django, Flask, FastAPI, PostgreSQL
-
-#### Luis (`luis.html`)
-- **Especialización Mobile**: Perfil centrado en desarrollo de aplicaciones móviles
-- **Ubicación**: Sevilla, España - Desarrollador de 28 años
-- **Desarrollo Móvil**: React Native, Flutter, JavaScript, TypeScript
-- **Entretenimiento**: Películas de tecnología y música ideal para programar
-
-#### Estiven (`estiven.html`)
-- **Especialización AI/ML**: Perfil enfocado en inteligencia artificial y machine learning
-- **Ubicación**: Bilbao, España - Ingeniero de 25 años
-- **Tecnologías IA**: Python, TensorFlow, PyTorch, Scikit-learn
-- **Entretenimiento**: Películas de ciencia ficción y música experimental
-
 #### Bitácora (`bitacora.html`)
 - **Resumen Ejecutivo**: Función `mostrarResumen()` que genera y muestra dinámicamente un resumen del proyecto
 - **Timeline Interactivo**: Animaciones de entrada basadas en scroll para las fases del proyecto
@@ -289,31 +266,6 @@ El archivo `main.js` incluye funciones globales disponibles en todas las página
 - **Google Fonts**: Por las tipografías Poppins y Roboto
 - **Bootstrap Icons**: Por la iconografía moderna
 - **Equipo de Desarrollo**: Lucas, Victoria, Sebastián, Luis y Estiven
-
-## Integrantes del Equipo
-
-### 👨‍💻 Lucas - Frontend Developer
-- **Especialidad**: React, Vue.js, Angular
-- **Ubicación**: Madrid, España
-- **Edad**: 26 años
-
-### 🎨 Victoria - UX/UI Designer
-- **Especialidad**: Figma, Adobe XD, Diseño UX
-- **Ubicación**: Barcelona, España
-- **Edad**: 29 años
-
-### ⚙️ Sebastián - Backend Developer
-- **Especialidad**: Python, Django, APIs
-- **Ubicación**: Valencia, España
-- **Edad**: 27 años
-
-### 📱 Luis - Mobile Developer
-- **Especialidad**: React Native, Flutter
-- **Ubicación**: Sevilla, España
-- **Edad**: 28 años
-
-### 🤖 Estiven - AI/ML Engineer
-- **Especialidad**: Python, TensorFlow, PyTorch
 - **Ubicación**: Bilbao, España
 - **Edad**: 25 años
 
