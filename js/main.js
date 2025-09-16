@@ -312,6 +312,14 @@ const darkThemeStyles = `
     .dark-theme .section-title {
         color: #ffffff !important;
     }
+    
+    .dark-theme .text-muted {
+        color: #cccccc !important;
+    }
+    
+    .dark-theme p.text-muted {
+        color: #cccccc !important;
+    }
 `;
 
 // Agregar estilos de tema oscuro al head
