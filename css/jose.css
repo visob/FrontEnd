@@ -1,9 +1,5 @@
-/* jose.css */
-/* Personalización exclusiva para jose.html */
-
-/* Que la card ocupe casi todo el ancho */
 .profile-card {
-  max-width: 95% !important;   /* casi todo el ancho */
+  max-width: 95% !important;   
   margin: 2rem auto;
   border-radius: 15px;
   overflow: hidden;
@@ -14,7 +10,6 @@
   opacity: 0.3;
 }
 
-/* Contenedor del texto más espacioso */
 .profile-card .card-body {
   padding: 3rem 3rem;
   background: rgba(0, 0, 0, 0.55);
@@ -23,9 +18,9 @@
 
 /* Estirar texto para que aproveche más ancho */
 .profile-card .col-lg-8 {
-  flex: 0 0 100%;      /* ocupar todo el ancho */
-  max-width: 100%;     /* quitar límite de ancho */
-  text-align: justify; /* estirado con justificado */
+  flex: 0 0 100%;      
+  max-width: 100%;     
+  text-align: justify; 
 }
 
 /* Imágenes centradas con margen */
@@ -34,14 +29,12 @@
   text-align: center;
 }
 
-/* Ajuste tipográfico */
 .profile-card h2,
 .profile-card h3,
 .profile-card h4 {
   color: #f1c40f;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
   .profile-card {
     max-width: 100% !important;
@@ -52,10 +45,9 @@
     padding: 2rem 1rem;
   }
 }
-/* Centrar foto y nombre */
 .profile-img {
   display: block;
-  margin: 0 auto; /* centra la imagen */
+  margin: 0 auto; 
   width: 180px;
   height: 180px;
   object-fit: cover;
